@@ -27,9 +27,9 @@ import org.jetbrains.compose.web.dom.Div
 import musaib.components.HeroContainerKeyFrames
 import musaib.components.UserNameStyle
 import musaib.components.UsersMessageStyle
-import org.musaibshabir.portfolio.components.sections.home.components.SocialLinksRow
-import org.musaibshabir.portfolio.components.sections.home.style.HelloImStyle
-import org.musaibshabir.portfolio.components.sections.home.style.HeroSectionStyle
+import musaib.components.sections.home.components.SocialLinksRow
+import musaib.components.sections.home.style.HelloImStyle
+import musaib.components.sections.home.style.HeroSectionStyle
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 

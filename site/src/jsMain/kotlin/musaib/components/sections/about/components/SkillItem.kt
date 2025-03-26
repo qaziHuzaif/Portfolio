@@ -15,9 +15,9 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import musaib.components.models.Skill
-import org.musaibshabir.portfolio.components.sections.about.style.SkillItemImageVariant
-import org.musaibshabir.portfolio.theme.font.SkillProficiencyTextStyle
-import org.musaibshabir.portfolio.theme.font.SkillTextStyle
+import musaib.components.sections.about.style.SkillItemImageVariant
+import musaib.font.SkillProficiencyTextStyle
+import musaib.font.SkillTextStyle
 
 @Composable
 fun SkillItem(

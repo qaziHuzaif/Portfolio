@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.widgets
+package musaib.components.widgets
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier

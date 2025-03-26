@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.home.style
+package musaib.components.sections.home.style
 
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier

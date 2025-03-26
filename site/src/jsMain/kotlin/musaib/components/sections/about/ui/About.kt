@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.about.ui
+package musaib.components.sections.about.ui
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextAlign
@@ -18,8 +18,8 @@ import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import musaib.components.SectionDiscriptionStyle
 import musaib.components.models.Skill
 import musaib.components.sections.about.components.SkillItem
-import org.musaibshabir.portfolio.components.sections.about.style.AboutStyle
-import org.musaibshabir.portfolio.components.sections.about.style.SkillsGridStyle
+import musaib.components.sections.about.style.AboutStyle
+import musaib.components.sections.about.style.SkillsGridStyle
 import musaib.components.utils.Res
 import musaib.components.widgets.SectionTitle
 

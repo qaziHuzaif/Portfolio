@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.projects.components
+package musaib.components.sections.projects.components
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.dom.ElementRefScope

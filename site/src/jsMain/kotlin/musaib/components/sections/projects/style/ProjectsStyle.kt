@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.projects.style
+package musaib.components.sections.projects.style
 
 import com.varabyte.kobweb.silk.style.extendedBy
 import musaib.components.styles.SectionContainerStyle

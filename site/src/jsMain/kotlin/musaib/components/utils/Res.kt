@@ -86,7 +86,7 @@ object Res {
         const val GRADLE_DARK_LOGO = "images/Skills/gradle_dark.svg"
         const val GRADLE_LIGHT_LOGO = "images/Skills/gradle_light.svg"
         const val GIT_LOGO = "images/Skills/git.svg"
-        const val FIGMA_LOGO = "images/Tools/figma.svg"
+        const val FIGMA_LOGO = "images/Skills/figma.svg"
         const val PYTHON_LOGO = "images/Skills/python.svg"
         const val MARKDOWN_LIGHT_LOGO = "images/Skills/markdown_light.svg"
         const val MARKDOWN_DARK_LOGO = "images/Skills/markdown_dark.svg"

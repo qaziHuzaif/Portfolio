@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.theme.font
+package musaib.font
 
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -8,8 +8,6 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.extendedBy
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
-import musaib.font.Fonts
-import musaib.font.siteFont
 
 // Default text style, used with different color and style variants in other styles or modifiers
 val TextStyle = CssStyle {

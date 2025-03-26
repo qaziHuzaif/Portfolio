@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.projects.components
+package musaib.components.sections.projects.components
 
 import musaib.components.utils.Res
 import musaib.components.utils.Res.Constants

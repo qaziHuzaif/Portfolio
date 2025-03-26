@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.projects.ui
+package musaib.components.sections.projects.ui
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextAlign
@@ -19,10 +19,10 @@ import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 import musaib.components.SectionDiscriptionStyle
-import org.musaibshabir.portfolio.components.sections.about.style.AboutStyle
-import org.musaibshabir.portfolio.components.sections.projects.components.AppearanceAwareImage
-import org.musaibshabir.portfolio.components.sections.projects.components.RoundedImage
-import org.musaibshabir.portfolio.components.sections.projects.components.getAllProjects
+import musaib.components.sections.about.style.AboutStyle
+import musaib.components.sections.projects.components.AppearanceAwareImage
+import musaib.components.sections.projects.components.RoundedImage
+import musaib.components.sections.projects.components.getAllProjects
 import musaib.components.utils.Res
 import musaib.components.utils.Res.Constants
 import musaib.components.widgets.SectionTitle

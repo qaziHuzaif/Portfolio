@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.sections.home.components
+package musaib.components.sections.home.components
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -15,7 +15,7 @@ import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 import musaib.components.styles.SocialLinkStyle
 import musaib.components.utils.Res
-import org.musaibshabir.portfolio.components.widgets.LinkButton
+import musaib.components.widgets.LinkButton
 
 @Composable
 fun SocialLinksRow() {

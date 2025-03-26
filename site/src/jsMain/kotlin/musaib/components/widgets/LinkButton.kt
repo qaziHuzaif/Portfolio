@@ -1,4 +1,4 @@
-package org.musaibshabir.portfolio.components.widgets
+package musaib.components.widgets
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -11,9 +11,6 @@ import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonKind
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyleVariant
-import musaib.components.widgets.ButtonColors
-import musaib.components.widgets.ButtonShape
-import musaib.components.widgets.getButtonModifier
 import org.jetbrains.compose.web.css.cssRem
 import kotlin.text.isNullOrEmpty
 

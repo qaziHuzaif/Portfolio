@@ -24,7 +24,7 @@ import musaib.toSitePalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
-import org.musaibshabir.portfolio.components.sections.home.components.SocialLinkButton
+import musaib.components.sections.home.components.SocialLinkButton
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 import kotlin.js.Date

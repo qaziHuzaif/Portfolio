@@ -1,2 +1,2 @@
-package org.musaibshabir.portfolio.components.sections.skills.style
+package musaib.components.sections.skills.style
 

@@ -9,9 +9,9 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import musaib.components.layouts.DefaultPageLayout
 import musaib.toSitePalette
-import org.musaibshabir.portfolio.components.sections.about.ui.About
+import musaib.components.sections.about.ui.About
 import musaib.components.sections.home.ui.Home
-import org.musaibshabir.portfolio.components.sections.projects.ui.Projects
+import musaib.components.sections.projects.ui.Projects
 
 @Page
 @Composable
