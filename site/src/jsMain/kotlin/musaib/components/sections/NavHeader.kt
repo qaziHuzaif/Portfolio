@@ -1,16 +1,16 @@
 package musaib.components.sections
 
 import androidx.compose.runtime.*
-import com.varabyte.kobweb.browser.dom.ElementTarget
+import com.varabyte.kobweb.compose.css.functions.blur
 import com.varabyte.kobweb.compose.css.functions.clamp
+import com.varabyte.kobweb.compose.css.functions.saturate
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.CloseIcon
 import com.varabyte.kobweb.silk.components.icons.HamburgerIcon
 import com.varabyte.kobweb.silk.components.icons.MoonIcon
@@ -20,8 +20,6 @@ import com.varabyte.kobweb.silk.components.navigation.UncoloredLinkVariant
 import com.varabyte.kobweb.silk.components.navigation.UndecoratedLinkVariant
 import com.varabyte.kobweb.silk.components.overlay.Overlay
 import com.varabyte.kobweb.silk.components.overlay.OverlayVars
-import com.varabyte.kobweb.silk.components.overlay.PopupPlacement
-import com.varabyte.kobweb.silk.components.overlay.Tooltip
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.animation.toAnimation
@@ -31,12 +29,33 @@ import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import org.jetbrains.compose.web.css.*
+import com.varabyte.kobweb.silk.theme.colors.palette.background
+import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import musaib.components.widgets.IconButton
-import musaib.toSitePalette
+import org.jetbrains.compose.web.css.*
 
 val NavHeaderStyle = CssStyle.base {
-    Modifier.fillMaxWidth().padding(1.cssRem)
+    val colorPalette = colorMode.toPalette()
+    Modifier
+        .fillMaxWidth()
+        .padding(1.cssRem)
+        .backgroundColor(colorPalette.background.toRgb().copyf(alpha = 0.8f))
+        .position(Position.Sticky)
+        .top(0.percent)
+        .backdropFilter(saturate(180.percent), blur(8.px))
+        .display(DisplayStyle.Flex)
+}
+
+val SideMenuStyle = CssStyle.base {
+
+    val colorPalette = colorMode.toPalette()
+    Modifier
+        .fillMaxHeight()
+        .width(clamp(8.cssRem, 33.percent, 10.cssRem))
+        .padding(top = 1.cssRem, leftRight = 1.cssRem)
+        .gap(1.5.cssRem)
+        .backgroundColor(colorPalette.background.toRgb().copyf(alpha = 0.8f))
+        .backdropFilter(saturate(180.percent), blur(8.px))
 }
 
 @Composable
@@ -46,8 +65,10 @@ private fun NavLink(path: String, text: String) {
 
 @Composable
 private fun MenuItems() {
-    NavLink("/", "Home")
-    NavLink("/about", "About")
+    NavLink("#home", "Home")
+    NavLink("#about", "About")
+    NavLink("#projects", "Projects")
+    NavLink("#contact", "Contact")
 }
 
 @Composable
@@ -56,7 +77,7 @@ private fun ColorModeButton() {
     IconButton(onClick = { colorMode = colorMode.opposite },) {
         if (colorMode.isLight) MoonIcon() else SunIcon()
     }
-    Tooltip(ElementTarget.PreviousSibling, "Toggle color mode", placement = PopupPlacement.BottomRight)
+
 }
 
 @Composable
@@ -75,7 +96,7 @@ private fun CloseButton(onClick: () -> Unit) {
 
 val SideMenuSlideInAnim = Keyframes {
     from {
-        Modifier.translateX(100.percent)
+        Modifier.translateX((-100).percent)
     }
 
     to {
@@ -99,29 +120,44 @@ enum class SideMenuState {
 
 @Composable
 fun NavHeader() {
-    Row(NavHeaderStyle.toModifier(), verticalAlignment = Alignment.CenterVertically) {
-        Link("https://kobweb.varabyte.com") {
-            // Block display overrides inline display of the <img> tag, so it calculates centering better
-            Image("/kobweb-logo.png", "Kobweb Logo", Modifier.height(2.cssRem).display(DisplayStyle.Block))
+    Row(
+        NavHeaderStyle.toModifier(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .gap(1.5.cssRem)
+                .displayIfAtLeast(Breakpoint.MD),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            MenuItems()
         }
 
-        Spacer()
+        Row(
+            Modifier
+                .gap(1.5.cssRem)
+                .displayIfAtLeast(Breakpoint.MD),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.End
+        ) {
 
-        Row(Modifier.gap(1.5.cssRem).displayIfAtLeast(Breakpoint.MD), verticalAlignment = Alignment.CenterVertically) {
-            MenuItems()
             ColorModeButton()
         }
 
         Row(
             Modifier
+                .fillMaxWidth()
                 .fontSize(1.5.cssRem)
                 .gap(1.cssRem)
                 .displayUntil(Breakpoint.MD),
+            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
             var menuState by remember { mutableStateOf(SideMenuState.CLOSED) }
 
-            ColorModeButton()
+
             HamburgerButton(onClick =  { menuState = SideMenuState.OPEN })
 
             if (menuState != SideMenuState.CLOSED) {
@@ -131,12 +167,16 @@ fun NavHeader() {
                     onAnimationEnd = { if (menuState == SideMenuState.CLOSING) menuState = SideMenuState.CLOSED }
                 )
             }
+
+            ColorModeButton()
         }
     }
 }
 
 @Composable
 private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd: () -> Unit) {
+
+
     Overlay(
         Modifier
             .setVariable(OverlayVars.BackgroundColor, Colors.Transparent)
@@ -144,15 +184,9 @@ private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd
     ) {
         key(menuState) { // Force recompute animation parameters when close button is clicked
             Column(
-                Modifier
-                    .fillMaxHeight()
-                    .width(clamp(8.cssRem, 33.percent, 10.cssRem))
-                    .align(Alignment.CenterEnd)
-                    // Close button will appear roughly over the hamburger button, so the user can close
-                    // things without moving their finger / cursor much.
-                    .padding(top = 1.cssRem, leftRight = 1.cssRem)
-                    .gap(1.5.cssRem)
-                    .backgroundColor(ColorMode.current.toSitePalette().nearBackground)
+
+                SideMenuStyle.toModifier()
+                    .align(Alignment.CenterStart)
                     .animation(
                         SideMenuSlideInAnim.toAnimation(
                             duration = 200.ms,
@@ -161,13 +195,13 @@ private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd
                             fillMode = AnimationFillMode.Forwards
                         )
                     )
-                    .borderRadius(topLeft = 2.cssRem)
+                    .borderRadius(topRight = 2.cssRem)
                     .onClick { it.stopPropagation() }
                     .onAnimationEnd { onAnimationEnd() },
-                horizontalAlignment = Alignment.End
+                horizontalAlignment = Alignment.Start
             ) {
                 CloseButton(onClick = { close() })
-                Column(Modifier.padding(right = 0.75.cssRem).gap(1.5.cssRem).fontSize(1.4.cssRem), horizontalAlignment = Alignment.End) {
+                Column(Modifier.padding(right = 0.75.cssRem).gap(1.5.cssRem).fontSize(1.4.cssRem), horizontalAlignment = Alignment.Start) {
                     MenuItems()
                 }
             }
