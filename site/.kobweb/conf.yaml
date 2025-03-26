@@ -1,0 +1,14 @@
+site:
+  title: "Test 2"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/musaib.js"
+      api: "build/libs/musaib.jar"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/musaib.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
