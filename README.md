@@ -2,14 +2,17 @@
 
 ## Portfolio Website
 
-Welcome to my personal portfolio website, built using the [Kobweb](https://github.com/varabyte/kobweb), a Compose HTML framework for Kotlin multi-platform. This site showcases my projects, skills, and experiences
+Welcome to my personal portfolio website, built using the [Kobweb](https://github.com/varabyte/kobweb). This site showcases my projects, skills, and experiences.
 
-## [Try Kotfolio](https://kotfolio.onrender.com/)
+## [Site](https://kotfolio.onrender.com/)
 
 <p align="center">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Jetpack Compose" src="https://img.shields.io/static/v1?style=for-the-badge&message=Jetpack+Compose&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a> 
 </p>
+
+## About Kobweb 
+Kobweb is an opinionated Kotlin framework for creating websites and web applications. It is built on top of Compose HTML and draws inspiration from frameworks like Next.js and Chakra UI. Kobweb enables developers to use Kotlin and Compose to build rich, dynamic web applications while leveraging the greater Kotlin ecosystem.
 
 
 ## Tech Stack
