@@ -23,7 +23,7 @@ Kobweb is an opinionated Kotlin framework for creating websites and web applicat
 
 
 ## Previews: 
-![Kotffolio Preview](https://github.com/binayshaw7777/Kotfolio/assets/62587060/78a76148-318e-42c3-96c3-782565dc7a92)
+![Preview]([https://github.com/binayshaw7777/Kotfolio/assets/62587060/78a76148-318e-42c3-96c3-782565dc7a92](https://github.com/MusaibShabir/Porfolio/blob/master/images/full_screenshot.png))
 
 
 ## Getting Started
