@@ -1,6 +1,7 @@
 package musaib.components.sections
 
 import androidx.compose.runtime.*
+import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -38,6 +39,41 @@ val FooterStyle = CssStyle {
             .padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
 
     }
+
+}
+
+val FooterTextStyle = CssStyle {
+
+    Breakpoint.ZERO {
+
+        Modifier
+            .fontSize(FontSize.Small)
+    }
+
+    Breakpoint.SM {
+
+        Modifier
+            .fontSize(FontSize.Small)
+    }
+
+    Breakpoint.MD {
+
+        Modifier
+            .fontSize(FontSize.Large)
+    }
+
+    Breakpoint.XL {
+
+        Modifier
+            .fontSize(FontSize.Medium)
+    }
+
+    Breakpoint.LG {
+
+        Modifier
+            .fontSize(FontSize.Medium)
+    }
+
 
 }
 
@@ -140,12 +176,12 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                             }
                         )
                     ,
-                    size = IconSize.SM
+                    size = IconSize.XXS
                 )
 
                 SpanText(
                     text = "Srinagar J&K",
-                    modifier = modifier
+                    modifier = FooterTextStyle.toModifier()
                         .width(auto)
                         .color(
                             when (ColorMode.current) {
@@ -159,7 +195,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
             }
 
             TimeDisplay(
-                modifier = modifier.width(10.cssRem),
+                modifier = FooterTextStyle.toModifier().width(10.cssRem),
                 timeZone = "Asia/Kolkata"
             )
         }
@@ -168,7 +204,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
     }
 
 
-    // For Size MD
+    // For Size MD & Above
     Row (
         modifier = modifier
             .displayIfAtLeast(Breakpoint.MD)
@@ -202,12 +238,11 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                             }
                         )
                     ,
-                    size = IconSize.SM
+                    size = IconSize.XXS
                 )
-
                 SpanText(
                     text = "Srinagar J&K",
-                    modifier = modifier
+                    modifier = FooterTextStyle.toModifier()
                         .width(auto)
                         .color(
                             when (ColorMode.current) {
@@ -219,7 +254,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
                 SpanText(
                     text = "|",
-                    modifier = modifier
+                    modifier = FooterTextStyle.toModifier()
                         .padding { leftRight(.5.cssRem) }
                         .color(
                             when (ColorMode.current) {
@@ -230,7 +265,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                 )
 
                 TimeDisplay(
-                    modifier = modifier.width(8.cssRem),
+                    modifier = FooterTextStyle.toModifier().width(10.cssRem),
                     timeZone = "Asia/Kolkata"
                 )
             }
@@ -255,27 +290,13 @@ fun Footer(modifier: Modifier = Modifier) {
     }
 }
 
-@Composable
-fun DeveloperLocationInfo() {
-
-    Row (
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.End,
-    ){
-
-        DeveloperLocation()
-
-
-    }
-
-}
 
 @Composable
 fun CopyrightInfo() {
 
     SpanText(
         text = getCopyrightText(),
-        modifier = Modifier
+        modifier = FooterTextStyle.toModifier()
             .fillMaxWidth()
             .color(
                 when (ColorMode.current) {
@@ -310,7 +331,7 @@ fun TimeDisplay(
 
     SpanText(
         text = currentTime,
-        modifier = modifier
+        modifier = FooterTextStyle.toModifier()
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
@@ -347,7 +368,7 @@ fun DeveloperLocation() {
         )
         SpanText(
             text = "Srinagar J&K India 190010",
-            modifier = Modifier
+            modifier = TimeDisplayStyle.toModifier()
                 .fillMaxWidth()
                 .color(
                     when (ColorMode.current) {
