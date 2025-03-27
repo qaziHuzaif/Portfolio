@@ -5,6 +5,7 @@ import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -21,13 +22,13 @@ import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.coroutines.delay
+import musaib.components.sections.home.components.SocialLinkButton
+import musaib.components.styles.MainButtonStyle
+import musaib.components.utils.Res
 import musaib.toSitePalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
-import musaib.components.sections.home.components.SocialLinkButton
-import musaib.components.styles.MainButtonStyle
-import musaib.components.utils.Res
 import kotlin.js.Date
 import kotlin.time.Duration.Companion.seconds
 
@@ -145,9 +146,8 @@ fun FooterContactRow(modifier: Modifier) {
 fun DeveloperLocationInfoRow(modifier: Modifier) {
 
     // For Size SM
-
     Column(
-        modifier = modifier.displayUntil(Breakpoint.SM),
+        modifier = modifier.displayUntil(Breakpoint.MD),
         verticalArrangement = Arrangement.spacedBy(1.cssRem)
     ) {
         Row (
@@ -192,10 +192,14 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
             }
 
+
+            Spacer()
             TimeDisplay(
-                modifier = TimeDisplayStyle.toModifier().width(10.cssRem),
+                //modifier = modifier.width(5.cssRem),
                 timeZone = "Asia/Kolkata"
             )
+
+
         }
 
         CopyrightInfo()
@@ -263,7 +267,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                 )
 
                 TimeDisplay(
-                    modifier = FooterTextStyle.toModifier().width(10.cssRem),
+                    //modifier = modifier.width(10.cssRem),
                     timeZone = "Asia/Kolkata"
                 )
             }
@@ -329,7 +333,8 @@ fun TimeDisplay(
 
     SpanText(
         text = currentTime,
-        modifier = FooterTextStyle.toModifier()
+        modifier = FooterTextStyle.toModifier().then(modifier)
+            .width(5.cssRem)
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
@@ -366,7 +371,7 @@ fun DeveloperLocation() {
         )
         SpanText(
             text = "Srinagar J&K India 190010",
-            modifier = TimeDisplayStyle.toModifier()
+            modifier = Modifier
                 .fillMaxWidth()
                 .color(
                     when (ColorMode.current) {
