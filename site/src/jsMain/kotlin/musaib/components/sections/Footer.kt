@@ -343,7 +343,7 @@ fun TimeDisplay(
 
 // Function to get the formatted time for a specific time zone
 fun getFormattedTime(timeZone: String): String {
-    val options = js("{ timeZone: timeZone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }")
+    val options = js("{ timeZone: timeZone, hour: '2-digit', minute: '2-digit', hour12: true }")
     return Date().toLocaleTimeString("en-US", options)
 }
 
