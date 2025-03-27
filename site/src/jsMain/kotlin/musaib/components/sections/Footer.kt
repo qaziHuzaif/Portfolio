@@ -79,8 +79,6 @@ val FooterTextStyle = CssStyle {
 
 val TimeDisplayStyle = CssStyle {
 
-
-
     Breakpoint.SM {
 
         Modifier
@@ -195,7 +193,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
             }
 
             TimeDisplay(
-                modifier = FooterTextStyle.toModifier().width(10.cssRem),
+                modifier = TimeDisplayStyle.toModifier().width(10.cssRem),
                 timeZone = "Asia/Kolkata"
             )
         }
