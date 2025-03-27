@@ -1,15 +1,14 @@
-![Group 21](https://github.com/binayshaw7777/Kotfolio/assets/62587060/da8002a1-fceb-4ded-bf53-eef944dd138a)
 
-# Kotfolio
 
-Kotfolio is a minimalistic and clean portfolio project built with [Kobweb](https://github.com/varabyte/kobweb), a Compose HTML framework for Kotlin multi-platform. The design is inspired by product designers, showcasing a sleek black color scheme.
+**# Portfolio Website**
+
+Welcome to my personal portfolio website, built using the [Kobweb](https://github.com/varabyte/kobweb), a Compose HTML framework for Kotlin multi-platform. This site showcases my projects, skills, and experiences
 
 ## [Try Kotfolio](https://kotfolio.onrender.com/)
 
 <p align="center">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Jetpack Compose" src="https://img.shields.io/static/v1?style=for-the-badge&message=Jetpack+Compose&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a> 
-  <a href="https://hits.sh/github.com/binayshaw7777/Kotfolio/"><img alt="Hits" src="https://hits.sh/github.com/binayshaw7777/Kotfolio.svg?style=for-the-badge&label=Views&extraCount=10&color=54856b"/></a>
 </p>
 
 ## Features
