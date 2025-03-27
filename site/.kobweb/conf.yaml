@@ -1,6 +1,6 @@
 site:
   title: "Musaib Shabir"
-  basePath: "Porfolio"
+  basePath: "Portfolio"
 
 server:
   files:
