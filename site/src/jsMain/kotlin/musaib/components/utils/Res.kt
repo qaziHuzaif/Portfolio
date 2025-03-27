@@ -1,7 +1,5 @@
 package musaib.components.utils
 
-import com.varabyte.kobweb.compose.ui.graphics.Color
-
 object Res {
 
     object Constants {
@@ -17,16 +15,16 @@ object Res {
 
 
 
-        const val SLACK_URL = "https://kotlinlang.slack.com/team/U07E4NQ32JJ"
         const val DISCORD_URL = "https://discordapp.com/users/914566253312618527"
         const val WHATSAPP_URL = "https://wa.me/qr/YSOCVLJKQJMIN1"
         const val TELEGRAM_URL = "https://t.me/MusaibShabir"
         const val INSTAGRAM_URL = "https://www.instagram.com/musaib.shabir/"
 
 
-
-        const val PROJECT_READBUD_URL = "https://github.com/binayshaw7777/ReadBud"
-
+        // Projects Links
+        const val FOUNT_IT_URL = "https://github.com/MusaibShabir/Found_It"
+        const val RALITH_MILITH_URL = "https://github.com/Tajamul21/Ralith-Milith"
+        const val PORTFOLIO_URL = "https://github.com/Tajamul21/Ralith-Milith"
 
         const val GREETING = "Hello I'm"
         const val NAME = "Musaib Shabir"
@@ -59,13 +57,11 @@ object Res {
 
 
     object Images {
-        const val BACKGROUND_CIRCLES = "images/background_circles.svg"
+        const val BACKGROUND_HALF_CIRCLE = "images/background_circle.svg"
+        const val BACKGROUND_COMPASS = "images/arabic-art-svgrepo-com.svg"
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
         const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
         const val NAVIGATION_ARROW = "images/Navigation_Arrow.svg"
-        const val CUSTOM_CURSOR_DARK = "images/Custom_Cursor_Dark.svg"
-        const val CUSTOM_CURSOR_LIGHT = "images/Custom_Cursor_Light.svg"
-
 
 
 
@@ -94,11 +90,9 @@ object Res {
 
 
         // Projects
-        const val PROJECT_TEST = "images/Projects/testProject.png"
-        const val PROJECT_MEDIFY = "images/Projects/Project_Medify.png"
-        const val PROJECT_PASSGENIE = "images/Projects/Project_PassGenie.png"
-        const val PROJECT_PRESIN = "images/Projects/Project_PresIN.png"
-        const val PROJECT_READBUD = "images/Projects/Project_ReadBud.png"
+        const val PROJECT_FOUND_IT = "images/Projects/found_it.png"
+        const val PROJECT_PORFOLIO = "images/Projects/portfolio.png"
+        const val PROJECT_RALITH_MILITH = "images/Projects/ralith_milith.png"
     }
 
     object FontFamilies {
@@ -106,13 +100,4 @@ object Res {
         const val POPPINS_MEDIUM = "PoppinsMedium"
     }
 
-
-
-    object Colors {
-        val FOOTER_COLOR_LIGHT = Color.Companion.rgb(0xF1F1F1)
-        val FOOTER_COLOR_DARK = Color.Companion.rgb(0x0D0D0D)
-        val GLASS_BOX_BORDER_COLOR_LIGHT = Color.Companion.rgb(0xE9E9E9)
-        val GLASS_BOX_BORDER_COLOR_DARK = Color.Companion.rgb(0x4E4E4E)
-        val DARK_GRAY_TEXT_COLOR = Color.Companion.rgb(0x7B7B7B)
-    }
 }
