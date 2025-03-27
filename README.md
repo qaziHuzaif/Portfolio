@@ -1,6 +1,6 @@
 
 
-**# Portfolio Website**
+## Portfolio Website
 
 Welcome to my personal portfolio website, built using the [Kobweb](https://github.com/varabyte/kobweb), a Compose HTML framework for Kotlin multi-platform. This site showcases my projects, skills, and experiences
 
@@ -10,12 +10,6 @@ Welcome to my personal portfolio website, built using the [Kobweb](https://githu
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Jetpack Compose" src="https://img.shields.io/static/v1?style=for-the-badge&message=Jetpack+Compose&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a> 
 </p>
-
-## Features
-
-- **Minimal Design:** Keep it simple, yet elegant, to highlight your work.
-- **Responsive:** Ensures a seamless experience across various devices.
-- **Kotlin Multi-Platform:** Leverages the power of Kotlin for both front-end and back-end development.
 
 
 ## Tech Stack
@@ -28,12 +22,6 @@ Welcome to my personal portfolio website, built using the [Kobweb](https://githu
 ## Previews: 
 ![Kotffolio Preview](https://github.com/binayshaw7777/Kotfolio/assets/62587060/78a76148-318e-42c3-96c3-782565dc7a92)
 
-## Mockups
-![1](https://github.com/binayshaw7777/Kotfolio/assets/62587060/0e9eb36b-8a9a-4036-82a3-4fccd67c5a83)
-![Free Premium Black 3D Device Website Mockup](https://github.com/binayshaw7777/Kotfolio/assets/62587060/9ac5f3a9-fa9e-4093-b45c-396f28811445)
-![2](https://github.com/binayshaw7777/Kotfolio/assets/62587060/fd81d615-37ac-4dd7-a98e-0cc9e8e6684f)
-
-
 
 ## Getting Started
 
@@ -41,7 +29,7 @@ Follow these steps to set up Kotfolio locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/kotfolio.git
+   git clone https://github.com/MusaibShabir/Porfolio.git
    ```
 
 2. **Getting Started**
@@ -59,11 +47,5 @@ You can use any editor you want for the project, but we recommend using **Intell
 using the [Toolbox App](https://www.jetbrains.com/toolbox-app/).
 
 Press `Q` in the terminal to gracefully stop the server.
-
----
-
-<br>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=binayshaw7777/Kotfolio&type=Date)](https://star-history.com/#binayshaw7777/Kotfolio&Date)
 
 <br>
