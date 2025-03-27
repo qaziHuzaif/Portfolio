@@ -5,7 +5,6 @@ import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -26,6 +25,7 @@ import musaib.components.sections.home.components.SocialLinkButton
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 import musaib.toSitePalette
+import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
@@ -193,7 +193,6 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
             }
 
 
-            Spacer()
             TimeDisplay(
                 //modifier = modifier.width(5.cssRem),
                 timeZone = "Asia/Kolkata"
@@ -335,6 +334,7 @@ fun TimeDisplay(
         text = currentTime,
         modifier = FooterTextStyle.toModifier().then(modifier)
             .width(5.cssRem)
+            .alignContent(AlignContent.End)
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
