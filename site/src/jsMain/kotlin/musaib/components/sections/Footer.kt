@@ -147,7 +147,9 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
     // For Size SM
     Column(
-        modifier = modifier.displayUntil(Breakpoint.MD),
+        modifier = modifier
+            .fillMaxWidth()
+            .displayUntil(Breakpoint.MD),
         verticalArrangement = Arrangement.spacedBy(1.cssRem)
     ) {
         Row (
@@ -160,7 +162,6 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
             Row (
                 modifier = modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
             ){
 
@@ -180,7 +181,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                 SpanText(
                     text = "Srinagar J&K",
                     modifier = FooterTextStyle.toModifier()
-                        .width(auto)
+                        .width(6.cssRem)
                         .color(
                             when (ColorMode.current) {
                                 ColorMode.LIGHT -> Colors.Gray
@@ -194,10 +195,8 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
 
             TimeDisplay(
-                //modifier = modifier.width(5.cssRem),
                 timeZone = "Asia/Kolkata"
             )
-
 
         }
 
@@ -350,39 +349,6 @@ fun getFormattedTime(timeZone: String): String {
     return Date().toLocaleTimeString("en-US", options)
 }
 
-@Composable
-fun DeveloperLocation() {
-
-    Row (
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Start
-    ){
-
-        FaLocationArrow(
-            modifier = Modifier
-                .padding(right = .5.cssRem)
-                .color(
-                    when (ColorMode.current) {
-                        ColorMode.LIGHT -> Colors.Gray
-                        ColorMode.DARK -> Colors.DimGray
-                    }
-                )
-        )
-        SpanText(
-            text = "Srinagar J&K India 190010",
-            modifier = Modifier
-                .fillMaxWidth()
-                .color(
-                    when (ColorMode.current) {
-                        ColorMode.LIGHT -> Colors.Gray
-                        ColorMode.DARK -> Colors.DimGray
-                    }
-                )
-        )
-    }
-
-}
 
 @Composable
 fun ContactLinksRow(
