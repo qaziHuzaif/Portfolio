@@ -8,10 +8,10 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import musaib.components.layouts.DefaultPageLayout
-import musaib.toSitePalette
 import musaib.components.sections.about.ui.About
 import musaib.components.sections.home.ui.Home
 import musaib.components.sections.projects.ui.Projects
+import musaib.toSitePalette
 
 @Page
 @Composable
@@ -35,3 +35,4 @@ fun HomePage() {
     }
 
 }
+

@@ -33,7 +33,7 @@ val HeroSectionStyle = SectionContainerStyle.extendedBy{
         Modifier
 
             .fontSize(3.cssRem)
-            .height(90.vh)
+            .height(100.vh)
 
     }
 }

@@ -4,6 +4,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.px
