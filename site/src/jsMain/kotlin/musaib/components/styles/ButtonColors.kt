@@ -1,4 +1,4 @@
-package musaib.components.widgets
+package musaib.components.styles
 
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
