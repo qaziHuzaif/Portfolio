@@ -1,4 +1,4 @@
-package musaib.font
+package musaib.components.styles
 
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier

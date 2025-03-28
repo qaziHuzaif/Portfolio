@@ -56,9 +56,9 @@ fun DefaultPageLayout(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            NavHeader() // Navigation bar stays on top
-            content() // Main content
-            Footer() // Footer at the bottom
+            NavHeader()
+            content()
+            Footer()
         }
     }
 }

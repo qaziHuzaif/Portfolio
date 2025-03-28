@@ -87,16 +87,9 @@ object Res {
         const val MARKDOWN_DARK_LOGO = "images/Skills/markdown_dark.svg"
 
 
-
         // Projects
         const val PROJECT_FOUND_IT = "images/Projects/found_it.png"
         const val PROJECT_PORFOLIO = "images/Projects/portfolio.png"
         const val PROJECT_RALITH_MILITH = "images/Projects/ralith_milith.png"
     }
-
-    object FontFamilies {
-        const val POPPINS_REGULAR = "PoppinsRegular"
-        const val POPPINS_MEDIUM = "PoppinsMedium"
-    }
-
 }
