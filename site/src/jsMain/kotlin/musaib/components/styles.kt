@@ -5,6 +5,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.opacity
+import com.varabyte.kobweb.compose.ui.modifiers.scale
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
@@ -46,16 +47,18 @@ val UsersMessageStyle = CssStyle {
 val HeroContainerKeyFrames = Keyframes {
     0.percent {
         Modifier
-            .margin(top = 50.px)
+            .margin(left = (-30).percent)  // Start from far left
             .opacity(0)
+            .scale(1)  // Start slightly smaller
     }
+
     100.percent {
         Modifier
-            .margin(top = 0.px)
+            .margin(left = 0.px)  // Final position
             .opacity(1)
+            .scale(1.0)  // Normal size
     }
 }
-
 
 
 

@@ -47,9 +47,9 @@ fun Home(
             modifier = Modifier
                 .fillMaxHeight()
                 .animation(HeroContainerKeyFrames.toAnimation(
-                duration = 2.s,
-                timingFunction = AnimationTimingFunction.EaseInOut
-            )),
+                    duration = 1.s,
+                    timingFunction = AnimationTimingFunction.EaseInOut
+                )),
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Center
         ) {
@@ -101,7 +101,7 @@ fun Home(
                     size = ButtonSize.LG,
                     modifier = MainButtonStyle.toModifier()
                         .background(currentPalette.buttonBackground)
-                        //.width(120.px)
+
                 ) {
                     SpanText(
                         text = Res.Constants.RESUME,
