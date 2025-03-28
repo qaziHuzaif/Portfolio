@@ -4,8 +4,6 @@
 
 Welcome to my personal portfolio website, built using the [Kobweb](https://github.com/varabyte/kobweb). This site showcases my projects, skills, and experiences.
 
-## [Site](https://kotfolio.onrender.com/)
-
 <p align="center">
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Jetpack Compose" src="https://img.shields.io/static/v1?style=for-the-badge&message=Jetpack+Compose&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a> 
