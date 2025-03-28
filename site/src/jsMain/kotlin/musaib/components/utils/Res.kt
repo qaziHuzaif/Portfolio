@@ -24,7 +24,7 @@ object Res {
         // Projects Links
         const val FOUNT_IT_URL = "https://github.com/MusaibShabir/Found_It"
         const val RALITH_MILITH_URL = "https://github.com/Tajamul21/Ralith-Milith"
-        const val PORTFOLIO_URL = "https://github.com/Tajamul21/Ralith-Milith"
+        const val PORTFOLIO_URL = "https://github.com/MusaibShabir/Portfolio"
 
         const val GREETING = "Hello I'm"
         const val NAME = "Musaib Shabir"
@@ -57,7 +57,6 @@ object Res {
 
 
     object Images {
-        const val BACKGROUND_HALF_CIRCLE = "images/background_circle.svg"
         const val BACKGROUND_COMPASS = "images/arabic-art-svgrepo-com.svg"
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
         const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
