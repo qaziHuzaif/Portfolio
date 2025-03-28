@@ -9,7 +9,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
@@ -19,11 +18,6 @@ import com.varabyte.kobweb.silk.style.animation.toAnimation
 import com.varabyte.kobweb.silk.style.toModifier
 import musaib.SitePalette
 import musaib.SubheadlineTextStyle
-import org.jetbrains.compose.web.css.AnimationTimingFunction
-import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.s
-import org.jetbrains.compose.web.dom.Div
 import musaib.components.HeroContainerKeyFrames
 import musaib.components.UserNameStyle
 import musaib.components.UsersMessageStyle
@@ -32,6 +26,11 @@ import musaib.components.sections.home.style.HelloImStyle
 import musaib.components.sections.home.style.HeroSectionStyle
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
+import org.jetbrains.compose.web.css.AnimationTimingFunction
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.s
+import org.jetbrains.compose.web.dom.Div
 
 @Composable
 fun Home(
@@ -39,13 +38,15 @@ fun Home(
 ) {
 
     Row(
-        modifier = Modifier
+        modifier = HeroSectionStyle.toModifier()
             .fillMaxWidth().id("home"),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
-            modifier = HeroSectionStyle.toModifier().animation(HeroContainerKeyFrames.toAnimation(
+            modifier = Modifier
+                .fillMaxHeight()
+                .animation(HeroContainerKeyFrames.toAnimation(
                 duration = 2.s,
                 timingFunction = AnimationTimingFunction.EaseInOut
             )),
@@ -113,7 +114,6 @@ fun Home(
             }
 
         }
-
 
     }
 
