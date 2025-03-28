@@ -93,7 +93,7 @@ object Res {
 
         // Projects
         const val PROJECT_FOUND_IT = "images/Projects/found_it.png"
-        const val PROJECT_PORFOLIO = "images/Projects/portfolio.png"
+        const val PROJECT_PORTFOLIO = "images/Projects/portfolio.png"
         const val PROJECT_RALITH_MILITH = "images/Projects/ralith_milith.png"
     }
 }
