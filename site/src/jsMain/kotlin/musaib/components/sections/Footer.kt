@@ -22,6 +22,8 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.coroutines.delay
 import musaib.components.sections.home.components.SocialLinkButton
+import musaib.components.styles.FooterStyle
+import musaib.components.styles.FooterTextStyle
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 import musaib.toSitePalette
@@ -32,60 +34,6 @@ import org.jetbrains.compose.web.css.percent
 import kotlin.js.Date
 import kotlin.time.Duration.Companion.seconds
 
-
-val FooterStyle = CssStyle {
-    base {
-        Modifier
-            //.backgroundColor(colorMode.toSitePalette().nearBackground)
-            .padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
-
-    }
-
-}
-
-val FooterTextStyle = CssStyle {
-
-    Breakpoint.ZERO {
-
-        Modifier
-            .fontSize(FontSize.Small)
-    }
-
-    Breakpoint.SM {
-
-        Modifier
-            .fontSize(FontSize.Small)
-    }
-
-    Breakpoint.MD {
-
-        Modifier
-            .fontSize(FontSize.Large)
-    }
-
-    Breakpoint.XL {
-
-        Modifier
-            .fontSize(FontSize.Medium)
-    }
-
-    Breakpoint.LG {
-
-        Modifier
-            .fontSize(FontSize.Medium)
-    }
-
-
-}
-
-val TimeDisplayStyle = CssStyle {
-
-    Breakpoint.SM {
-
-        Modifier
-            .width(10.cssRem)
-    }
-}
 
 
 
