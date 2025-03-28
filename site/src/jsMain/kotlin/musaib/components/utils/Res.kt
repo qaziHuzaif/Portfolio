@@ -46,6 +46,10 @@ object Res {
                 "functional applications built using modern technologies. "
         const val PROJECT_REPOSITORIES_URL = "https://github.com/MusaibShabir?tab=repositories"
         const val MORE_ON_GITHUB = "More on GitHub."
+
+        // Footer
+        const val DEVELOPED_BY = "Developed by Musaib Shabir"
+        const val DEVELOPER_LOCATION = "Srinagar J&K India"
     }
 
     object Title {

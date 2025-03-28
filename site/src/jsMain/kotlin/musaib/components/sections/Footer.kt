@@ -1,7 +1,6 @@
 package musaib.components.sections
 
 import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -14,7 +13,6 @@ import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.icons.fa.*
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
@@ -29,12 +27,8 @@ import musaib.components.utils.Res
 import musaib.toSitePalette
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.keywords.auto
-import org.jetbrains.compose.web.css.percent
 import kotlin.js.Date
 import kotlin.time.Duration.Companion.seconds
-
-
 
 
 @Composable
@@ -148,7 +142,10 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
         }
 
-        CopyrightInfo()
+        FooterSpanText(
+            text = getCopyrightText(),
+            modifier = modifier.fillMaxWidth()
+        )
     }
 
 
@@ -157,13 +154,15 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
         modifier = modifier
             .displayIfAtLeast(Breakpoint.MD)
             .fillMaxWidth()
-
         ,
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ){
 
-        CopyrightInfo()
+        FooterSpanText(
+            text = getCopyrightText(),
+            modifier = modifier.fillMaxWidth()
+        )
 
 
         Row (
@@ -188,34 +187,16 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                     ,
                     size = IconSize.XXS
                 )
-                SpanText(
-                    text = "Srinagar J&K",
-                    modifier = FooterTextStyle.toModifier()
-                        .width(auto)
-                        .color(
-                            when (ColorMode.current) {
-                                ColorMode.LIGHT -> Colors.Gray
-                                ColorMode.DARK -> Colors.DimGray
-                            }
-                        )
-                )
+                FooterSpanText(text = Res.Constants.DEVELOPER_LOCATION)
 
-                SpanText(
+                FooterSpanText(
                     text = "|",
-                    modifier = FooterTextStyle.toModifier()
-                        .padding { leftRight(.5.cssRem) }
-                        .color(
-                            when (ColorMode.current) {
-                                ColorMode.LIGHT -> Colors.Gray
-                                ColorMode.DARK -> Colors.DimGray
-                            }
-                        )
+                    modifier = modifier.padding {
+                        leftRight(.5.cssRem)
+                    }
                 )
 
-                TimeDisplay(
-                    //modifier = modifier.width(10.cssRem),
-                    timeZone = "Asia/Kolkata"
-                )
+                TimeDisplay(timeZone = "Asia/Kolkata")
             }
 
         }
@@ -238,14 +219,12 @@ fun Footer(modifier: Modifier = Modifier) {
     }
 }
 
-
 @Composable
-fun CopyrightInfo() {
-
+fun FooterSpanText(text: String, modifier: Modifier = Modifier) {
     SpanText(
-        text = getCopyrightText(),
-        modifier = FooterTextStyle.toModifier()
-            .fillMaxWidth()
+        text = text,
+        modifier = FooterTextStyle.toModifier().then(modifier)
+
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
@@ -255,10 +234,13 @@ fun CopyrightInfo() {
     )
 }
 
+
+
+
 fun getCopyrightText(): String {
     // Get the current year using kotlinx-datetime
     val currentYear = Date().getFullYear().toString()
-    return "© $currentYear | Developed by Musaib Shabir"
+    return "© $currentYear | ${Res.Constants.DEVELOPED_BY}"
 }
 
 
