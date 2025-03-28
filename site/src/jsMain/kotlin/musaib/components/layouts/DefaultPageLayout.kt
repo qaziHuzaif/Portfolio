@@ -8,6 +8,8 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import kotlinx.browser.document
 import musaib.components.sections.Footer
 import musaib.components.sections.NavHeader
@@ -16,25 +18,23 @@ import musaib.components.utils.Res
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.vh
+
 
 @OptIn(ExperimentalComposeWebApi::class)
 @Composable
 fun SVGBackroundCircle(modifier: Modifier = Modifier) {
     AppearanceAwareImage(
-        src = Res.Images.BACKGROUND_COMPASS,
+        src = Res.Images.HOME_BACKGROUND_TOP_RIGHT_SHAPE,
+        dyanmicColor = false,
         modifier = modifier
-            .position(Position.Absolute) // Position it absolutely
-            .top(0.px) // Stick to the top
-            .right(0.px) // Align to the right
-            //.zIndex(1) // Push it to the background
+            .position(Position.Absolute)
+            .top(0.px)
+            .right(0.px)
+            .height(100.vh)
             .pointerEvents(PointerEvents.None)
-            .size(403.px)
-
     )
 }
-
-
-
 
 @Composable
 fun DefaultPageLayout(
@@ -47,13 +47,13 @@ fun DefaultPageLayout(
 
     Box(
         modifier = Modifier
-            .fillMaxWidth()
-            //.position(Position.Relative) // Ensures absolute children stay within this
+            .fillMaxSize()
+            .position(Position.Relative)
     ) {
-        //SVGBackroundCircle() // Background SVG at the top-right
-
+        SVGBackroundCircle(modifier = Modifier.displayIfAtLeast(Breakpoint.XL))
         Column(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             NavHeader()

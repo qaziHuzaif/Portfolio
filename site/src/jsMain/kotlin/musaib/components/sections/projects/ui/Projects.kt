@@ -86,7 +86,7 @@ fun Projects() {
                             .margin(right = 4.px)
                     )
                     AppearanceAwareImage(
-                        src = Res.Images.NAVIGATION_ARROW
+                        src = Res.Images.NAVIGATION_ARROW,
                     )
                 }
             }

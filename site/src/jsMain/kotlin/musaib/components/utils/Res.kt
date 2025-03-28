@@ -61,7 +61,7 @@ object Res {
 
 
     object Images {
-        const val BACKGROUND_COMPASS = "images/arabic-art-svgrepo-com.svg"
+        const val HOME_BACKGROUND_TOP_RIGHT_SHAPE = "images/waves.svg"
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
         const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
         const val NAVIGATION_ARROW = "images/Navigation_Arrow.svg"
