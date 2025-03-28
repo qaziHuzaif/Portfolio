@@ -98,7 +98,7 @@ fun Home(
                     onClick = {
                         ctx.router.navigateTo(Res.Constants.RESUME_URL)
                     },
-                    size = ButtonSize.MD,
+                    size = ButtonSize.LG,
                     modifier = MainButtonStyle.toModifier()
                         .background(currentPalette.buttonBackground)
                         //.width(120.px)

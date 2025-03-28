@@ -65,7 +65,7 @@ fun FooterContactRow(modifier: Modifier) {
             onClick = {
                 ctx.router.navigateTo(Res.Constants.MAIL_TO)
             },
-            size = ButtonSize.MD,
+            size = ButtonSize.LG,
             modifier = MainButtonStyle.toModifier()
                 .background(currentPalette.buttonBackground)
 
@@ -293,27 +293,27 @@ fun ContactLinksRow(
         if (displayEmail) {
             SocialLinkButton(
                 Res.Constants.MAIL_TO
-            ) { FaEnvelope(size = IconSize.XL) }
+            ) { FaEnvelope(size = IconSize.XXL) }
         }
 
         SocialLinkButton(
             Res.Constants.LINKEDIN_URL
-        ) { FaLinkedinIn(size = IconSize.XL) }
+        ) { FaLinkedinIn(size = IconSize.XXL) }
 
         SocialLinkButton(
             Res.Constants.DISCORD_URL
-        ) { FaDiscord(size = IconSize.XL) }
+        ) { FaDiscord(size = IconSize.XXL) }
 
         SocialLinkButton(
             Res.Constants.WHATSAPP_URL
-        ) { FaWhatsapp(size = IconSize.XL) }
+        ) { FaWhatsapp(size = IconSize.XXL) }
 
         SocialLinkButton(
             Res.Constants.TELEGRAM_URL
-        ) { FaTelegram(size = IconSize.XL) }
+        ) { FaTelegram(size = IconSize.XXL) }
 
         SocialLinkButton(
             Res.Constants.INSTAGRAM_URL
-        ) { FaInstagram(size = IconSize.XL) }
+        ) { FaInstagram(size = IconSize.XXL) }
     }
 }
