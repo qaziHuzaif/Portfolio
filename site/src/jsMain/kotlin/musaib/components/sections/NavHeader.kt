@@ -80,6 +80,7 @@ private fun NavLink(path: String, text: String, isActive: Boolean) {
         text,
         variant = UndecoratedLinkVariant.then(UncoloredLinkVariant),
         modifier = MenuStyle.toModifier()
+
             .then(if (isActive) Modifier.color(ColorMode.current.toSitePalette().subHeadLine)
              else Modifier
             )

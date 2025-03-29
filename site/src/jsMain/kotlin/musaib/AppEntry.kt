@@ -38,6 +38,7 @@ fun AppEntry(content: @Composable () -> Unit) {
             SmoothColorStyle.toModifier()
                 .minHeight(100.vh)
                 .scrollBehavior(ScrollBehavior.Smooth)
+
         ) {
             content()
         }

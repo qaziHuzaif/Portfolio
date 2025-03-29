@@ -14,6 +14,7 @@ import musaib.components.styles.SectionContainerStyle
 
 val HeroSectionStyle = SectionContainerStyle.extendedBy{
 
+
     Breakpoint.ZERO {
         Modifier
             .fontSize(2.5.cssRem)
