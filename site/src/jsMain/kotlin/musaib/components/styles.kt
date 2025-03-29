@@ -16,35 +16,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 
-val UserNameStyle = CssStyle {
-    base {
-        Modifier.fontSize(FontSize.XLarge)
-    }
-    Breakpoint.SM {
-        Modifier.fontSize(FontSize.Larger)
-    }
-    Breakpoint.MD {
-        Modifier.fontSize(FontSize.Larger)
-    }
-    Breakpoint.LG {
-        Modifier.fontSize(FontSize.Larger)
-    }
-}
 
-val UsersMessageStyle = CssStyle {
-    base {
-        Modifier.fontSize(FontSize.Medium)
-    }
-    Breakpoint.SM {
-        Modifier.fontSize(FontSize.XLarge)
-    }
-    Breakpoint.MD {
-        Modifier.fontSize(FontSize.Large)
-    }
-    Breakpoint.LG {
-        Modifier.fontSize(FontSize.XXLarge)
-    }
-}
 
 val HeroContainerKeyFrames = Keyframes {
     0.percent {
