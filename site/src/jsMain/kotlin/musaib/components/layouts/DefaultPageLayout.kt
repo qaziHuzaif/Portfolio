@@ -42,7 +42,7 @@ fun DefaultPageLayout(
     content: @Composable () -> Unit,
 ) {
     LaunchedEffect(title) {
-        document.title = "Musaib Shabir - $title"
+        document.title = "Musaib Shabir"
     }
 
     Box(
