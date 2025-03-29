@@ -39,7 +39,7 @@ object Res {
                 "where I explore advancements to build intelligent and scalable solutions. Beyond coding, " +
                 "I am fascinated by the cosmos and constantly seek to learn more about the universe, its mysteries, " +
                 "and the science behind it. " +
-                "I am always eager to explore new ideas and develop solutions that make a meaningful impact. \uD83D\uDE0A"
+                "I am always eager to explore new ideas and develop solutions that make a meaningful impact."
 
 
         const val PROJECT_SECTION_TEXT = "A showcase of my latest work, featuring innovative and " +
@@ -48,8 +48,13 @@ object Res {
         const val MORE_ON_GITHUB = "More on GitHub."
 
         // Footer
-        const val DEVELOPED_BY = "Developed by Musaib Shabir"
+        const val COPYRIGHT = "Musaib Shabir"
         const val DEVELOPER_LOCATION = "Srinagar J&K India"
+
+        const val GET_IN_TOUCH = "GET IN TOUCH"
+        const val GET_IN_TOUCH_DISCRIPTION = "Feel free to reach out for collaboration, project inquiries, " +
+                "or just to say hello. I'd love to connect! Whether you're looking for a passionate developer " +
+                "to bring your ideas to life or simply want to discuss the latest in tech, don't hesitate to get in touch. \uD83D\uDE0A"
     }
 
     object Title {

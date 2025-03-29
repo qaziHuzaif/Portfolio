@@ -1,6 +1,10 @@
 package musaib.components.sections
 
 import androidx.compose.runtime.*
+import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.ScrollSnapAlign
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -12,6 +16,7 @@ import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.icons.fa.*
+import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
@@ -32,14 +37,15 @@ import kotlin.time.Duration.Companion.seconds
 
 
 @Composable
-fun FooterContactRow(modifier: Modifier) {
+fun FooterContactRow(modifier: Modifier = Modifier) {
 
     // Contact Row If At Least SM Size
     Row (
         modifier = modifier
             .displayUntil(Breakpoint.SM)
             .fillMaxWidth()
-            .padding { bottom(2.cssRem) },
+
+                ,
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ){
@@ -54,7 +60,7 @@ fun FooterContactRow(modifier: Modifier) {
         modifier = modifier
             .displayIfAtLeast(Breakpoint.MD)
             .fillMaxWidth()
-            .padding { bottom(2.cssRem) },
+        ,
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ){
@@ -113,7 +119,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                         .color(
                             when (ColorMode.current) {
                                 ColorMode.LIGHT -> Colors.Gray
-                                ColorMode.DARK -> Colors.DimGray
+                                ColorMode.DARK -> Colors.LightGray
                             }
                         )
                     ,
@@ -127,7 +133,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                         .color(
                             when (ColorMode.current) {
                                 ColorMode.LIGHT -> Colors.Gray
-                                ColorMode.DARK -> Colors.DimGray
+                                ColorMode.DARK -> Colors.LightGray
                             }
                         )
                 )
@@ -181,7 +187,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                         .color(
                             when (ColorMode.current) {
                                 ColorMode.LIGHT -> Colors.Gray
-                                ColorMode.DARK -> Colors.DimGray
+                                ColorMode.DARK -> Colors.LightGray
                             }
                         )
                     ,
@@ -211,13 +217,65 @@ fun Footer(modifier: Modifier = Modifier) {
             .fillMaxWidth().id("contact")
     ){
 
-        FooterContactRow(modifier = modifier)
 
-        DeveloperLocationInfoRow(modifier = modifier)
+        GetInTouchColumn()
+
+        FooterContactRow()
+
+        HorizontalDivider()
+       DeveloperLocationInfoRow(modifier = modifier.padding { topBottom(0.5.cssRem) })
 
 
     }
 }
+
+@Composable
+fun GetInTouchColumn(modifier: Modifier = Modifier) {
+
+    Column (
+        modifier = modifier
+            .fillMaxWidth()
+        ,
+        horizontalAlignment = Alignment.Start
+    ){
+
+        // Get in Touch
+        Row (
+            modifier = modifier.fillMaxWidth()
+            ,
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Start
+        ){
+
+            SpanText(
+                text = "GET IN TOUCH",
+                modifier = modifier
+                    .fontSize(3.cssRem)
+                    .fontWeight(FontWeight.Bold)
+                    .color(ColorMode.current.toSitePalette().subHeadLine)
+            )
+        }
+
+        // Discription
+        Column (
+            modifier = modifier
+                .width(52.cssRem)
+                .padding(top = 1.cssRem, bottom = 3.cssRem)
+            ,
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Center
+        ) {
+
+            SpanText(
+                text = Res.Constants.GET_IN_TOUCH_DISCRIPTION,
+                modifier = modifier
+                    .fontSize(FontSize.Large)
+                    .textAlign(TextAlign.Justify)
+            )
+        }
+    }
+}
+
 
 @Composable
 fun FooterSpanText(text: String, modifier: Modifier = Modifier) {
@@ -228,7 +286,7 @@ fun FooterSpanText(text: String, modifier: Modifier = Modifier) {
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
-                    ColorMode.DARK -> Colors.DimGray
+                    ColorMode.DARK -> Colors.LightGray
                 }
             )
     )
@@ -240,7 +298,7 @@ fun FooterSpanText(text: String, modifier: Modifier = Modifier) {
 fun getCopyrightText(): String {
     // Get the current year using kotlinx-datetime
     val currentYear = Date().getFullYear().toString()
-    return "© $currentYear | ${Res.Constants.DEVELOPED_BY}"
+    return "© $currentYear | ${Res.Constants.COPYRIGHT}"
 }
 
 
@@ -267,7 +325,7 @@ fun TimeDisplay(
             .color(
                 when (ColorMode.current) {
                     ColorMode.LIGHT -> Colors.Gray
-                    ColorMode.DARK -> Colors.DimGray
+                    ColorMode.DARK -> Colors.LightGray
                 }
             )
     )

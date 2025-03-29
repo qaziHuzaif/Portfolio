@@ -22,25 +22,24 @@ val HeroSectionStyle = SectionContainerStyle.extendedBy{
 
     Breakpoint.ZERO {
         Modifier
-            .fontSize(2.5.cssRem)
-            .height(100.vh)
+            .height(85.vh)
     }
     Breakpoint.SM {
         Modifier
-            .fontSize(2.5.cssRem)
-            .height(100.vh)
+            .height(85.vh)
     }
     Breakpoint.MD {
         Modifier
-            .fontSize(2.75.cssRem)
             .height(100.vh)
     }
     Breakpoint.LG {
         Modifier
-
-            .fontSize(3.cssRem)
             .height(100.vh)
+    }
 
+    Breakpoint.XL {
+        Modifier
+            .height(100.vh)
     }
 }
 
@@ -69,18 +68,18 @@ val HelloImStyle = CssStyle{
 val UserNameStyle = CssStyle {
 
     base {
-        Modifier.fontSize(FontSize.Larger)
+        Modifier.fontSize(3.cssRem)
     }
 }
 
 val UsersMessageStyle = CssStyle {
 
     Breakpoint.ZERO {
-        Modifier.fontSize(FontSize.XLarge)
+        Modifier.fontSize(FontSize.Medium)
     }
 
     Breakpoint.SM {
-        Modifier.fontSize(FontSize.XLarge)
+        Modifier.fontSize(FontSize.Medium)
     }
     Breakpoint.MD {
         Modifier.fontSize(FontSize.Large)
