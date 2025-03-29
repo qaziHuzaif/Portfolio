@@ -9,7 +9,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
@@ -17,7 +16,6 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.animation.toAnimation
 import com.varabyte.kobweb.silk.style.toModifier
 import musaib.SitePalette
-import musaib.SubheadlineTextStyle
 import musaib.components.HeroContainerKeyFrames
 import musaib.components.UserNameStyle
 import musaib.components.UsersMessageStyle
@@ -28,9 +26,7 @@ import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.css.AnimationTimingFunction
 import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.s
-import org.jetbrains.compose.web.dom.Div
 
 @Composable
 fun Home(
@@ -66,19 +62,12 @@ fun Home(
                     .fontWeight(FontWeight.Bold)
             )
 
-            Div(
-                SubheadlineTextStyle.toModifier()
+            SpanText(
+                text = Res.Constants.SUB_HEADLINE,
+                modifier = UsersMessageStyle.toModifier()
                     .color(currentPalette.subHeadLine)
-                    .margin(top = 5.px)
-                    .toAttrs()
-            ) {
-                SpanText(
-                    text = Res.Constants.SUB_HEADLINE,
-                    modifier = UsersMessageStyle.toModifier()
-                        .color(currentPalette.subHeadLine)
 
-                )
-            }
+            )
 
             val ctx = rememberPageContext()
 

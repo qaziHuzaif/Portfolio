@@ -21,7 +21,7 @@ val UserNameStyle = CssStyle {
         Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.SM {
-        Modifier.fontSize(FontSize.XXLarge)
+        Modifier.fontSize(FontSize.Larger)
     }
     Breakpoint.MD {
         Modifier.fontSize(FontSize.Larger)
@@ -36,13 +36,13 @@ val UsersMessageStyle = CssStyle {
         Modifier.fontSize(FontSize.Medium)
     }
     Breakpoint.SM {
-        Modifier.fontSize(FontSize.Large)
+        Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.MD {
         Modifier.fontSize(FontSize.Large)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.XLarge)
+        Modifier.fontSize(FontSize.XXLarge)
     }
 }
 
