@@ -1,5 +1,7 @@
 package musaib.components.sections.about.style
 
+import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.ImageStyle
@@ -87,6 +89,37 @@ val SkillsGridStyle = CssStyle {
             columnGap = 1.5.cssRem,
             rowGap = 2.5.cssRem
         )
+    }
+}
+
+val AboutDiscriptionStyle = CssStyle {
+
+    Breakpoint.ZERO {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 0.75.cssRem)
+            .textAlign(TextAlign.Justify)
+    }
+
+    Breakpoint.SM {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 0.75.cssRem)
+            .textAlign(TextAlign.Justify)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(FontSize.Medium)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
+    }
+
+    Breakpoint.XL {
+        Modifier.fontSize(FontSize.Large)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
     }
 }
 

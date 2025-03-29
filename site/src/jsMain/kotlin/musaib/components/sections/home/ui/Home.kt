@@ -16,12 +16,8 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.animation.toAnimation
 import com.varabyte.kobweb.silk.style.toModifier
 import musaib.SitePalette
-import musaib.components.HeroContainerKeyFrames
 import musaib.components.sections.home.components.SocialLinksRow
-import musaib.components.sections.home.style.HelloImStyle
-import musaib.components.sections.home.style.HeroSectionStyle
-import musaib.components.sections.home.style.UserNameStyle
-import musaib.components.sections.home.style.UsersMessageStyle
+import musaib.components.sections.home.style.*
 import musaib.components.styles.MainButtonStyle
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.css.AnimationTimingFunction

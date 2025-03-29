@@ -13,9 +13,9 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import musaib.components.AboutDiscriptionStyle
 import musaib.components.models.Skill
 import musaib.components.sections.about.components.SkillItem
+import musaib.components.sections.about.style.AboutDiscriptionStyle
 import musaib.components.sections.about.style.AboutStyle
 import musaib.components.sections.about.style.SkillsGridStyle
 import musaib.components.utils.Res
