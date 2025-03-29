@@ -3,7 +3,6 @@ package musaib.components.sections
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.ScrollSnapAlign
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -248,7 +247,7 @@ fun GetInTouchColumn(modifier: Modifier = Modifier) {
         ){
 
             SpanText(
-                text = "GET IN TOUCH",
+                text = Res.Constants.GET_IN_TOUCH,
                 modifier = modifier
                     .fontSize(3.cssRem)
                     .fontWeight(FontWeight.Bold)
