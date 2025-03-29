@@ -15,7 +15,6 @@ import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.icons.fa.*
-import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
@@ -221,7 +220,6 @@ fun Footer(modifier: Modifier = Modifier) {
 
         FooterContactRow()
 
-        HorizontalDivider()
        DeveloperLocationInfoRow(modifier = modifier.padding { topBottom(0.5.cssRem) })
 
 
@@ -249,15 +247,43 @@ fun GetInTouchColumn(modifier: Modifier = Modifier) {
             SpanText(
                 text = Res.Constants.GET_IN_TOUCH,
                 modifier = modifier
-                    .fontSize(3.cssRem)
-                    .fontWeight(FontWeight.Bold)
+                    .fontSize(2.cssRem)
+                    .fontWeight(FontWeight.Black)
                     .color(ColorMode.current.toSitePalette().subHeadLine)
             )
         }
 
         // Discription
+
+        // For Size SM & Below
         Column (
             modifier = modifier
+                .displayUntil(Breakpoint.MD)
+                .fillMaxWidth()
+                .padding(top = 1.cssRem, bottom = 3.cssRem)
+            ,
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Center
+        ) {
+
+            SpanText(
+                text = Res.Constants.GET_IN_TOUCH_DISCRIPTION,
+                modifier = modifier
+                    .fontSize(FontSize.Large)
+                    .textAlign(TextAlign.Justify)
+                    .color(
+                        when (ColorMode.current) {
+                            ColorMode.LIGHT -> Colors.Gray
+                            ColorMode.DARK -> Colors.LightGray
+                        }
+                    )
+            )
+        }
+
+        // For Size MD & Above
+        Column (
+            modifier = modifier
+                .displayIfAtLeast(Breakpoint.MD)
                 .width(52.cssRem)
                 .padding(top = 1.cssRem, bottom = 3.cssRem)
             ,
@@ -270,6 +296,12 @@ fun GetInTouchColumn(modifier: Modifier = Modifier) {
                 modifier = modifier
                     .fontSize(FontSize.Large)
                     .textAlign(TextAlign.Justify)
+                    .color(
+                        when (ColorMode.current) {
+                            ColorMode.LIGHT -> Colors.Gray
+                            ColorMode.DARK -> Colors.LightGray
+                        }
+                    )
             )
         }
     }
