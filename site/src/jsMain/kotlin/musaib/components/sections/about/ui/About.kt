@@ -1,7 +1,6 @@
 package musaib.components.sections.about.ui
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -9,13 +8,12 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
-import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import musaib.components.SectionDiscriptionStyle
+import musaib.components.AboutDiscriptionStyle
 import musaib.components.models.Skill
 import musaib.components.sections.about.components.SkillItem
 import musaib.components.sections.about.style.AboutStyle
@@ -36,8 +34,7 @@ fun About() {
 
         SpanText(
             text = Res.Constants.ABOUT_ME_TEXT,
-            modifier = SectionDiscriptionStyle.toModifier()
-                .textAlign(TextAlign.Center)
+            modifier = AboutDiscriptionStyle.toModifier()
                 .color(
                     when (ColorMode.current) {
                         ColorMode.LIGHT -> Colors.Gray

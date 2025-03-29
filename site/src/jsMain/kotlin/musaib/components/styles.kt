@@ -1,11 +1,13 @@
 package musaib.components
 
 import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.opacity
 import com.varabyte.kobweb.compose.ui.modifiers.scale
+import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
@@ -85,6 +87,7 @@ val SectionDiscriptionStyle = CssStyle {
     base {
         Modifier.fontSize(FontSize.Medium)
             .margin(topBottom = 0.75.cssRem)
+
     }
     Breakpoint.SM {
         Modifier.fontSize(FontSize.Small)
@@ -102,6 +105,35 @@ val SectionDiscriptionStyle = CssStyle {
     Breakpoint.XL {
         Modifier.fontSize(FontSize.Large)
             .margin(topBottom = 2.cssRem)
+    }
+}
+
+val AboutDiscriptionStyle = CssStyle {
+    base {
+        Modifier.fontSize(FontSize.Medium)
+            .margin(topBottom = 0.75.cssRem)
+
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 0.75.cssRem)
+            .textAlign(TextAlign.Justify)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(FontSize.Small)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(FontSize.Medium)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
+    }
+
+    Breakpoint.XL {
+        Modifier.fontSize(FontSize.Large)
+            .margin(topBottom = 2.cssRem)
+            .textAlign(TextAlign.Center)
     }
 }
 
