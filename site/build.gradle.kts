@@ -14,7 +14,8 @@ version = "1.0-SNAPSHOT"
 kobweb {
     app {
         index {
-            description.set("Powered by Kobweb")
+
+            description.set("Explore the portfolio of John Doe - A passionate Android developer specializing in Kotlin, Jetpack Compose, and modern mobile solutions.")
             head.add{
                 link(rel = "stylesheet", href = "/fonts/faces.css")
                 link( rel="preconnect", href="https://fonts.googleapis.com")
