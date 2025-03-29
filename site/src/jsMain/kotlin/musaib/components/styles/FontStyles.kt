@@ -21,10 +21,10 @@ val SkillTextStyle = CssStyle{
         Modifier.fontSize(FontSize.Small)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.Large)
+        Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.XL {
-        Modifier.fontSize(FontSize.Large)
+        Modifier.fontSize(FontSize.XLarge)
     }
 
 
@@ -34,19 +34,19 @@ val SkillProficiencyTextStyle = CssStyle {
 
     Breakpoint.ZERO {
 
-        Modifier.fontSize(FontSize.XSmall)
+        Modifier.fontSize(FontSize.Small)
     }
     Breakpoint.SM {
-        Modifier.fontSize(FontSize.Smaller)
+        Modifier.fontSize(FontSize.Small)
     }
     Breakpoint.MD {
         Modifier.fontSize(FontSize.Small)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.Small)
+        Modifier.fontSize(FontSize.Medium)
     }
     Breakpoint.XL {
-        Modifier.fontSize(FontSize.Small)
+        Modifier.fontSize(FontSize.Medium)
     }
 }
 
