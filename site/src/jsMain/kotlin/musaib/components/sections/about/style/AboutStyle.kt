@@ -7,20 +7,19 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.addVariant
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.extendedBy
-import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
+import musaib.components.styles.SectionContainerStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.vh
-import musaib.components.styles.SectionContainerStyle
 
 val AboutStyle = SectionContainerStyle.extendedBy {
 
     base {
         Modifier
             .height(auto)
-            .padding { bottom(5.cssRem) }
+            .padding { topBottom(10.cssRem) }
 
     }
 
@@ -45,7 +44,6 @@ val SkillItemImageVariant = ImageStyle.addVariant {
 }
 
 val SkillsSectionStyle = CssStyle {
-    val colorPalette = colorMode.toPalette()
     base {
         Modifier
             .height(30.vh)
@@ -53,12 +51,7 @@ val SkillsSectionStyle = CssStyle {
     Breakpoint.ZERO {
         Modifier
             .maxWidth(100.percent)
-//            .backgroundImage(
-//                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
-//                    //add(colorPalette.brand.primary.toRgb().copyf(alpha = if (colorMode.isDark) 0.1f else 0.2f))
-//                    add(Colors.Transparent, 50.percent)
-//                }
-//            )
+
     }
     Breakpoint.SM {
         Modifier.maxWidth(100.percent)
@@ -66,12 +59,7 @@ val SkillsSectionStyle = CssStyle {
     Breakpoint.MD {
         Modifier
             .maxWidth(100.percent)
-//            .backgroundImage(
-//                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 50.percent)) {
-//                    //add(colorPalette.brand.primary.toRgb().copyf(alpha = if (colorMode.isDark) 0.1f else 0.2f))
-//                    add(Colors.Transparent, 63.percent)
-//                }
-//            )
+
     }
     Breakpoint.LG {
         Modifier.maxWidth(100.percent)

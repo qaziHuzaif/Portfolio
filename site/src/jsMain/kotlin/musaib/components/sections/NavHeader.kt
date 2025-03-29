@@ -27,11 +27,15 @@ import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
+import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.palette.background
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
+import kotlinx.browser.document
+import kotlinx.browser.window
 import musaib.components.widgets.IconButton
+import musaib.toSitePalette
 import org.jetbrains.compose.web.css.*
 
 val NavHeaderStyle = CssStyle.base {
@@ -58,18 +62,39 @@ val SideMenuStyle = CssStyle.base {
         .backdropFilter(saturate(180.percent), blur(8.px))
 }
 
-@Composable
-private fun NavLink(path: String, text: String) {
-    Link(path, text, variant = UndecoratedLinkVariant.then(UncoloredLinkVariant))
+val MenuStyle = CssStyle{
+
+    hover {
+        Modifier.opacity(.5)
+    }
 }
 
+
+
+
+
 @Composable
-private fun MenuItems() {
-    NavLink("#home", "Home")
-    NavLink("#about", "About")
-    NavLink("#projects", "Projects")
-    NavLink("#contact", "Contact")
+private fun NavLink(path: String, text: String, isActive: Boolean) {
+    Link(
+        path,
+        text,
+        variant = UndecoratedLinkVariant.then(UncoloredLinkVariant),
+        modifier = MenuStyle.toModifier()
+            .then(if (isActive) Modifier.color(ColorMode.current.toSitePalette().subHeadLine)
+             else Modifier
+            )
+    )
 }
+
+
+@Composable
+private fun MenuItems(activeSection: String) {
+    NavLink("#home", "Home", activeSection == "home")
+    NavLink("#about", "About", activeSection == "about")
+    NavLink("#projects", "Projects", activeSection == "projects")
+    NavLink("#contact", "Contact", activeSection == "contact")
+}
+
 
 @Composable
 private fun ColorModeButton() {
@@ -120,6 +145,24 @@ enum class SideMenuState {
 
 @Composable
 fun NavHeader() {
+    var activeSection by remember { mutableStateOf("home") }
+
+    // Side effect to listen to scroll events and update active section
+    SideEffect {
+        window.onscroll =  {
+            val sections = listOf("home", "about", "projects", "contact")
+            sections.forEach { section ->
+                val element = document.getElementById(section)
+                if (element != null) {
+                    val rect = element.getBoundingClientRect()
+                    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                        activeSection = section
+                    }
+                }
+            }
+        }
+    }
+
     Row(
         NavHeaderStyle.toModifier(),
         verticalAlignment = Alignment.CenterVertically,
@@ -132,7 +175,7 @@ fun NavHeader() {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            MenuItems()
+            MenuItems(activeSection)
         }
 
         Row(
@@ -142,7 +185,6 @@ fun NavHeader() {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.End
         ) {
-
             ColorModeButton()
         }
 
@@ -157,12 +199,12 @@ fun NavHeader() {
         ) {
             var menuState by remember { mutableStateOf(SideMenuState.CLOSED) }
 
-
-            HamburgerButton(onClick =  { menuState = SideMenuState.OPEN })
+            HamburgerButton(onClick = { menuState = SideMenuState.OPEN })
 
             if (menuState != SideMenuState.CLOSED) {
                 SideMenu(
                     menuState,
+                    activeSection = activeSection,
                     close = { menuState = menuState.close() },
                     onAnimationEnd = { if (menuState == SideMenuState.CLOSING) menuState = SideMenuState.CLOSED }
                 )
@@ -173,9 +215,14 @@ fun NavHeader() {
     }
 }
 
-@Composable
-private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd: () -> Unit) {
 
+@Composable
+private fun SideMenu(
+    menuState: SideMenuState,
+    close: () -> Unit,
+    onAnimationEnd: () -> Unit,
+    activeSection: String
+) {
 
     Overlay(
         Modifier
@@ -202,7 +249,7 @@ private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd
             ) {
                 CloseButton(onClick = { close() })
                 Column(Modifier.padding(right = 0.75.cssRem).gap(1.5.cssRem).fontSize(1.4.cssRem), horizontalAlignment = Alignment.Start) {
-                    MenuItems()
+                    MenuItems(activeSection)
                 }
             }
         }
