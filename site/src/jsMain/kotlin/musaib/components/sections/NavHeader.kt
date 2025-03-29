@@ -157,7 +157,7 @@ fun NavHeader() {
                 if (element != null) {
                     val rect = element.getBoundingClientRect()
                     if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                        activeSection = section;
+                        activeSection = section
                     }
 
 
