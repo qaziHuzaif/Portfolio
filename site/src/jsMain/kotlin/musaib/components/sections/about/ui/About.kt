@@ -3,9 +3,12 @@ package musaib.components.sections.about.ui
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
+import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.color
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
@@ -45,16 +48,23 @@ fun About() {
 
         )
 
-        SimpleGrid(
-            modifier = SkillsGridStyle.toModifier()
-            ,
-            numColumns = numColumns(base = 2, md = 5, lg = 5)
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
         ) {
-            Skill.entries.forEach { skill ->
-                SkillItem(
-                    skill = skill,
-                )
+            SimpleGrid(
+                modifier = SkillsGridStyle.toModifier()
+                ,
+                numColumns = numColumns(base = 2, md = 5, lg = 5)
+            ) {
+                Skill.entries.forEach { skill ->
+                    SkillItem(
+                        skill = skill,
+                    )
+                }
             }
         }
+
     }
 }

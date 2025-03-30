@@ -20,6 +20,7 @@ val AboutStyle = SectionContainerStyle.extendedBy {
 
     base {
         Modifier
+            .fillMaxWidth()
             .height(auto)
             .padding { topBottom(10.cssRem) }
 
@@ -38,10 +39,10 @@ val SkillItemImageVariant = ImageStyle.addVariant {
         Modifier.size(2.cssRem)
     }
     Breakpoint.LG {
-        Modifier.size(2.25.cssRem)
+        Modifier.size(3.cssRem)
     }
     Breakpoint.XL {
-        Modifier.size(2.25.cssRem)
+        Modifier.size(3.5.cssRem)
     }
 }
 
@@ -75,7 +76,7 @@ val SkillsGridStyle = CssStyle {
     base {
         Modifier
             .fillMaxWidth()
-            .padding(top = 6.5.cssRem, left = 2.25.cssRem)
+            .padding( top = 6.5.cssRem, left = 3.cssRem)
             .gridAutoRows { size(1.fr) }
     }
     Breakpoint.ZERO {
@@ -84,10 +85,24 @@ val SkillsGridStyle = CssStyle {
             rowGap = 1.5.cssRem
         )
     }
+    Breakpoint.MD {
+        Modifier.gap(
+            columnGap = 5.cssRem,
+            rowGap = 2.5.cssRem
+        )
+    }
+
     Breakpoint.LG {
         Modifier.gap(
-            columnGap = 1.5.cssRem,
+            columnGap = 5.cssRem,
             rowGap = 2.5.cssRem
+        )
+    }
+
+    Breakpoint.XL {
+        Modifier.gap(
+            columnGap = 5.cssRem,
+            rowGap = 5.cssRem
         )
     }
 }
