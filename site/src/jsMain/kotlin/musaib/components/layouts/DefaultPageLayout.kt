@@ -2,7 +2,6 @@ package musaib.components.layouts
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import com.varabyte.kobweb.compose.css.PointerEvents
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -10,31 +9,16 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
+import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import kotlinx.browser.document
 import musaib.components.sections.footer.ui.Footer
 import musaib.components.sections.navHeader.ui.NavHeader
-import musaib.components.sections.projects.components.AppearanceAwareImage
 import musaib.components.utils.Res
-import org.jetbrains.compose.web.ExperimentalComposeWebApi
+import musaib.components.widgets.SVGHeroBackround
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 
-
-@OptIn(ExperimentalComposeWebApi::class)
-@Composable
-fun SVGBackroundCircle(modifier: Modifier = Modifier) {
-    AppearanceAwareImage(
-        src = Res.Images.HOME_BACKGROUND_TOP_RIGHT_SHAPE,
-        dyanmicColor = false,
-        modifier = modifier
-            .position(Position.Absolute)
-            .top(0.px)
-            .right(0.px)
-            .height(100.vh)
-            .pointerEvents(PointerEvents.None)
-    )
-}
 
 @Composable
 fun DefaultPageLayout(
@@ -50,7 +34,30 @@ fun DefaultPageLayout(
             .fillMaxSize()
             .position(Position.Relative)
     ) {
-        SVGBackroundCircle(modifier = Modifier.displayIfAtLeast(Breakpoint.XL))
+
+        // For Display Size Until MD
+        SVGHeroBackround(
+            modifier = Modifier
+                .displayUntil(Breakpoint.MD)
+                .top((-50).px)
+                .left((-50).px)
+                .height(28.vh)
+
+            ,
+            src = Res.Images.GREEN_CIRLCE
+        )
+
+        // For Display Size After  MD
+        SVGHeroBackround(
+            modifier = Modifier
+                .displayIfAtLeast(Breakpoint.LG)
+                .top(0.px)
+                .right(0.px)
+                .height(100.vh)
+            ,
+            src = Res.Images.WAVES
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize(),

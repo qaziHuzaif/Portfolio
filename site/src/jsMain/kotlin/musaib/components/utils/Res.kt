@@ -66,7 +66,12 @@ object Res {
 
 
     object Images {
-        const val HOME_BACKGROUND_TOP_RIGHT_SHAPE = "images/waves.svg"
+
+        // Hero Background
+        const val WAVES = "images/waves.svg"
+        const val GREEN_CIRLCE = "images/green_circle.svg"
+
+
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
         const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
         const val NAVIGATION_ARROW = "images/Navigation_Arrow.svg"
