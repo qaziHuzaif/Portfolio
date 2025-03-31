@@ -2,11 +2,7 @@ package musaib.components.sections.home.style
 
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.height
-import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.opacity
-import com.varabyte.kobweb.compose.ui.modifiers.scale
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
@@ -94,7 +90,15 @@ val UsersMessageStyle = CssStyle {
 }
 
 val HeroContainerKeyFrames = Keyframes {
+
     0.percent {
+        Modifier
+            .margin(left = (-30).percent)
+            .opacity(0)
+            .scale(1)
+    }
+
+    80.percent {
         Modifier
             .margin(left = (-30).percent)
             .opacity(0)
@@ -108,4 +112,3 @@ val HeroContainerKeyFrames = Keyframes {
             .scale(1.0)
     }
 }
-

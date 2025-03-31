@@ -39,8 +39,11 @@ fun Home(
             modifier = Modifier
                 .fillMaxHeight()
                 .animation(HeroContainerKeyFrames.toAnimation(
-                    duration = 1.s,
-                    timingFunction = AnimationTimingFunction.EaseInOut
+                    duration = 2.s,
+                    timingFunction = AnimationTimingFunction.cubicBezier(
+                        0.03, 0.96, 0.19, 0.97
+                    ),
+
                 )),
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Center
