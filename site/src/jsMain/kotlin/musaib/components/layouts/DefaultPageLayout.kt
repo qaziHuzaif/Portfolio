@@ -11,8 +11,8 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import kotlinx.browser.document
-import musaib.components.sections.Footer
-import musaib.components.sections.NavHeader
+import musaib.components.sections.footer.ui.Footer
+import musaib.components.sections.navHeader.ui.NavHeader
 import musaib.components.sections.projects.components.AppearanceAwareImage
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.ExperimentalComposeWebApi

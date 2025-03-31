@@ -48,7 +48,6 @@ fun Projects() {
                         ColorMode.DARK -> Colors.LightGray
                     }
                 )
-                //.fontFamily(Res.Fonts.DM_SANS)
         )
 
         SimpleGrid(
@@ -76,7 +75,6 @@ fun Projects() {
                         path = Constants.PROJECT_REPOSITORIES_URL,
                         text = Constants.MORE_ON_GITHUB,
                         modifier = Modifier
-                            //.fontFamily(Res.Fonts.DM_SANS)
                             .color(
                                 when (ColorMode.current) {
                                     ColorMode.LIGHT -> Colors.Black

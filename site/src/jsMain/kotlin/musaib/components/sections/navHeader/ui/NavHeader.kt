@@ -1,4 +1,4 @@
-package musaib.components.sections
+package musaib.components.sections.navHeader.ui
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.functions.blur
