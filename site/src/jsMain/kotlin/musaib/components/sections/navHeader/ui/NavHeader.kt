@@ -2,89 +2,29 @@ package musaib.components.sections.navHeader.ui
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
-import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
-import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.icons.CloseIcon
-import com.varabyte.kobweb.silk.components.icons.HamburgerIcon
-import com.varabyte.kobweb.silk.components.icons.MoonIcon
-import com.varabyte.kobweb.silk.components.icons.SunIcon
-import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.navigation.UncoloredLinkVariant
-import com.varabyte.kobweb.silk.components.navigation.UndecoratedLinkVariant
-import com.varabyte.kobweb.silk.components.overlay.Overlay
-import com.varabyte.kobweb.silk.components.overlay.OverlayVars
-import com.varabyte.kobweb.silk.style.animation.toAnimation
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.fontSize
+import com.varabyte.kobweb.compose.ui.modifiers.gap
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.document
 import kotlinx.browser.window
-import musaib.components.sections.navHeader.styles.MenuStyle
+import musaib.components.sections.navHeader.components.ColorModeButton
+import musaib.components.sections.navHeader.components.HamburgerButton
+import musaib.components.sections.navHeader.components.MenuItems
+import musaib.components.sections.navHeader.components.SideMenu
 import musaib.components.sections.navHeader.styles.NavHeaderStyle
-import musaib.components.sections.navHeader.styles.SideMenuSlideInAnim
-import musaib.components.sections.navHeader.styles.SideMenuStyle
-import musaib.components.widgets.IconButton
-import musaib.toSitePalette
-import org.jetbrains.compose.web.css.*
-
-
-@Composable
-private fun NavLink(path: String, text: String, isActive: Boolean) {
-    Link(
-        path,
-        text,
-        variant = UndecoratedLinkVariant.then(UncoloredLinkVariant),
-        modifier = MenuStyle.toModifier()
-
-            .then(if (isActive) Modifier.color(ColorMode.current.toSitePalette().subHeadLine)
-             else Modifier
-            )
-    )
-}
-
-
-@Composable
-private fun MenuItems(activeSection: String) {
-    NavLink("#home", "Home", activeSection == "home")
-    NavLink("#about", "About", activeSection == "about")
-    NavLink("#projects", "Projects", activeSection == "projects")
-    NavLink("#contact", "Contact", activeSection == "contact")
-}
-
-
-@Composable
-private fun ColorModeButton() {
-    var colorMode by ColorMode.currentState
-    IconButton(onClick = { colorMode = colorMode.opposite },) {
-        if (colorMode.isLight) MoonIcon() else SunIcon()
-    }
-
-}
-
-@Composable
-private fun HamburgerButton(onClick: () -> Unit) {
-    IconButton(onClick) {
-        HamburgerIcon()
-    }
-}
-
-@Composable
-private fun CloseButton(onClick: () -> Unit) {
-    IconButton(onClick) {
-        CloseIcon()
-    }
-}
-
-
+import org.jetbrains.compose.web.css.cssRem
 
 // Note: When the user closes the side menu, we don't immediately stop rendering it (at which point it would disappear
 // abruptly). Instead, we start animating it out and only stop rendering it when the animation is complete.
+
+
 enum class SideMenuState {
     CLOSED,
     OPEN,
@@ -96,6 +36,7 @@ enum class SideMenuState {
         CLOSING -> CLOSING
     }
 }
+
 
 @Composable
 fun NavHeader() {
@@ -172,42 +113,3 @@ fun NavHeader() {
 }
 
 
-@Composable
-private fun SideMenu(
-    menuState: SideMenuState,
-    close: () -> Unit,
-    onAnimationEnd: () -> Unit,
-    activeSection: String
-) {
-
-    Overlay(
-        Modifier
-            .setVariable(OverlayVars.BackgroundColor, Colors.Transparent)
-            .onClick { close() }
-    ) {
-        key(menuState) { // Force recompute animation parameters when close button is clicked
-            Column(
-
-                SideMenuStyle.toModifier()
-                    .align(Alignment.CenterStart)
-                    .animation(
-                        SideMenuSlideInAnim.toAnimation(
-                            duration = 200.ms,
-                            timingFunction = if (menuState == SideMenuState.OPEN) AnimationTimingFunction.EaseOut else AnimationTimingFunction.EaseIn,
-                            direction = if (menuState == SideMenuState.OPEN) AnimationDirection.Normal else AnimationDirection.Reverse,
-                            fillMode = AnimationFillMode.Forwards
-                        )
-                    )
-                    .borderRadius(topRight = 2.cssRem)
-                    .onClick { it.stopPropagation() }
-                    .onAnimationEnd { onAnimationEnd() },
-                horizontalAlignment = Alignment.Start
-            ) {
-                CloseButton(onClick = { close() })
-                Column(Modifier.padding(right = 0.75.cssRem).gap(1.5.cssRem).fontSize(1.4.cssRem), horizontalAlignment = Alignment.Start) {
-                    MenuItems(activeSection)
-                }
-            }
-        }
-    }
-}
