@@ -1,11 +1,6 @@
 package musaib.components.sections.footer.components
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.alignContent
@@ -15,7 +10,7 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.coroutines.delay
-import musaib.components.styles.FooterTextStyle
+import musaib.components.sections.footer.style.FooterTextStyle
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import kotlin.js.Date

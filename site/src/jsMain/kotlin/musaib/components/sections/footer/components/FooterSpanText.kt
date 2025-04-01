@@ -7,7 +7,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import musaib.components.styles.FooterTextStyle
+import musaib.components.sections.footer.style.FooterTextStyle
 
 @Composable
 fun FooterSpanText(text: String, modifier: Modifier = Modifier) {

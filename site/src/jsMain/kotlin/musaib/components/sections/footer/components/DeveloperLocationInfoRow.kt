@@ -16,7 +16,7 @@ import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import musaib.components.styles.FooterTextStyle
+import musaib.components.sections.footer.style.FooterTextStyle
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.css.cssRem
 import kotlin.js.Date
