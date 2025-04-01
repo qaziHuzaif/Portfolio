@@ -31,7 +31,6 @@ fun Footer(modifier: Modifier = Modifier) {
             .id("contact")
             .backgroundBlendMode(BackgroundBlendMode.ColorBurn)
     ){
-        val colorPalette = ColorMode.current.toSitePalette()
 
         Column(
             modifier = modifier
