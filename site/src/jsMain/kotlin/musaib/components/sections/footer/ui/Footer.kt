@@ -10,14 +10,12 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.palette.background
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import musaib.components.sections.footer.components.DeveloperLocationInfoRow
 import musaib.components.sections.footer.components.FooterContactRow
 import musaib.components.sections.footer.components.GetInTouchColumn
 import musaib.components.sections.footer.style.FooterStyle
-import musaib.toSitePalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
