@@ -7,14 +7,12 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.style.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import musaib.components.sections.footer.style.FooterDescriptionStyle
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.css.cssRem
@@ -61,12 +59,6 @@ fun GetInTouchColumn(modifier: Modifier = Modifier) {
             SpanText(
                 text = Res.Constants.GET_IN_TOUCH_DISCRIPTION,
                 modifier = FooterDescriptionStyle.toModifier()
-                    .color(
-                        when (ColorMode.current) {
-                            ColorMode.LIGHT -> Colors.Gray
-                            ColorMode.DARK -> Colors.LightGray
-                        }
-                    )
             )
         }
 
@@ -84,13 +76,8 @@ fun GetInTouchColumn(modifier: Modifier = Modifier) {
             SpanText(
                 text = Res.Constants.GET_IN_TOUCH_DISCRIPTION,
                 modifier = FooterDescriptionStyle.toModifier()
-                    .color(
-                        when (ColorMode.current) {
-                            ColorMode.LIGHT -> Colors.Gray
-                            ColorMode.DARK -> Colors.LightGray
-                        }
-                    )
             )
+
         }
     }
 }

@@ -1,11 +1,11 @@
 package musaib.components.sections.footer.style
 
-import com.varabyte.kobweb.compose.css.Cursor
-import com.varabyte.kobweb.compose.css.FontSize
-import com.varabyte.kobweb.compose.css.TextAlign
-import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.*
+import com.varabyte.kobweb.compose.css.functions.LinearGradient
+import com.varabyte.kobweb.compose.css.functions.linearGradient
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.extendedBy
@@ -18,9 +18,22 @@ val FooterStyle = CssStyle {
     base {
         Modifier
             .padding(top = 5.cssRem, bottom = 2.cssRem, leftRight = 10.percent)
+            .styleModifier {
+                backgroundImage(
+                    linearGradient(
+                        from = colorMode.toSitePalette().subHeadLine,
+                        to = colorMode.toSitePalette().nearBackground,
+                        dir = LinearGradient.Direction.ToBottom,
+                        interpolation = ColorInterpolationMethod.DisplayP3
+                    )
+
+                )
+            }
     }
 
 }
+
+
 
 
 val FooterTextStyle = CssStyle {
