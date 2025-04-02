@@ -50,7 +50,7 @@ object Res {
 
         // Footer
         const val COPYRIGHT = "Musaib Shabir"
-        const val DEVELOPER_LOCATION = "Srinagar J&K India"
+        const val DEVELOPER_LOCATION = "Srinagar, India"
 
         const val GET_IN_TOUCH = "GET IN TOUCH"
         const val GET_IN_TOUCH_DISCRIPTION = "Feel free to reach out for collaboration, project inquiries, " +
