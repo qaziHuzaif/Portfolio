@@ -12,6 +12,7 @@ object Res {
         const val MAIL_TO = "mailto:itzmusaibshabir@gmail.com"
 
         const val RESUME_URL = "https://drive.google.com/file/d/11M1RPYv3xNdwc88zEVvHVPVSrb5G9Fna/view?usp=drive_link"
+        const val DEVELOPER_LOCATION_ON_MAP = "https://maps.app.goo.gl/bjR36bERzYbTsqkv6"
 
 
 

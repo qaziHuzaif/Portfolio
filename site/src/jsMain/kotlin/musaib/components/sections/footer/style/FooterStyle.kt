@@ -1,13 +1,16 @@
 package musaib.components.sections.footer.style
 
+import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.compose.ui.modifiers.textAlign
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.extendedBy
+import com.varabyte.kobweb.silk.style.selectors.hover
+import musaib.toSitePalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 
@@ -20,8 +23,14 @@ val FooterStyle = CssStyle {
 }
 
 
-
 val FooterTextStyle = CssStyle {
+
+    base {
+        Modifier
+            .color(colorMode.toSitePalette().discription)
+    }
+
+
 
     Breakpoint.ZERO {
 
@@ -54,6 +63,20 @@ val FooterTextStyle = CssStyle {
     }
 
 }
+
+val FooterLocationStyle = FooterTextStyle.extendedBy {
+
+    hover {
+
+        Modifier
+            .textDecorationLine(TextDecorationLine.Underline)
+            .cursor(Cursor.Pointer)
+            .onClick {
+
+            }
+    }
+}
+
 
 val FooterDescriptionStyle = CssStyle {
 

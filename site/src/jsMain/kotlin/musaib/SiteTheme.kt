@@ -14,7 +14,7 @@ import com.varabyte.kobweb.silk.theme.colors.palette.color
  */
 class SitePalette(
     val nearBackground: Color,
-    val cobweb: Color,
+    val discription: Color,
     val subHeadLine: Color,
     val buttonBackground: Color,
     val buttonText: Color,
@@ -24,8 +24,7 @@ class SitePalette(
 object SitePalettes {
     val light = SitePalette(
         nearBackground = Color.rgb(0xF4F6FA),
-        cobweb = Colors.LightGray,
-
+        discription = Colors.Gray,
         subHeadLine = Color.rgb(0x0da30d),
         buttonBackground = Colors.Black,
         buttonText = Colors.White,
@@ -33,8 +32,7 @@ object SitePalettes {
     )
     val dark = SitePalette(
         nearBackground = Color.rgb(0x454545),
-        cobweb = Colors.LightGray.inverted(),
-
+        discription = Colors.LightGray,
         subHeadLine = Color.rgb(0x49D344),
         buttonBackground = Colors.White,
         buttonText = Colors.Black,
