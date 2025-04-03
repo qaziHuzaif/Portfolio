@@ -3,6 +3,7 @@ package musaib
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.varabyte.kobweb.compose.css.ScrollBehavior
+import com.varabyte.kobweb.compose.css.setVariable
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
 import com.varabyte.kobweb.core.App
@@ -15,9 +16,12 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.loadFromLocalStorage
 import com.varabyte.kobweb.silk.theme.colors.saveToLocalStorage
+import kotlinx.browser.document
 import org.jetbrains.compose.web.css.vh
+import org.w3c.dom.HTMLElement
 
 private const val COLOR_MODE_KEY = "musaib:colorMode"
+
 
 @InitSilk
 fun initColorMode(ctx: InitSilkContext) {
@@ -27,10 +31,14 @@ fun initColorMode(ctx: InitSilkContext) {
 @App
 @Composable
 fun AppEntry(content: @Composable () -> Unit) {
+
     SilkApp {
         val colorMode = ColorMode.current
         LaunchedEffect(colorMode) {
             colorMode.saveToLocalStorage(COLOR_MODE_KEY)
+
+            // Setting the Scroll Bar Thumb Color as per Theme
+            (document.body as HTMLElement).setVariable(ScrollbarThumbColor, colorMode.toSitePalette().subHeadLine)
         }
 
         Surface(
