@@ -70,7 +70,7 @@ object Res {
 
         // Hero Background
         const val WAVES = "images/waves.svg"
-        const val GREEN_CIRLCE = "images/green_circle.svg"
+        const val GREEN_CIRCE = "images/green_circle.svg"
 
 
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"

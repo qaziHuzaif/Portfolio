@@ -44,7 +44,7 @@ fun DefaultPageLayout(
                 .height(28.vh)
 
             ,
-            src = Res.Images.GREEN_CIRLCE
+            src = Res.Images.GREEN_CIRCE
         )
 
         // For Display Size After  MD
