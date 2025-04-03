@@ -1,8 +1,6 @@
 package musaib
 
-import com.varabyte.kobweb.compose.css.BackgroundColor
 import com.varabyte.kobweb.compose.css.ScrollBehavior
-import com.varabyte.kobweb.compose.css.StyleVariable
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -31,6 +29,7 @@ fun initSiteStyles(ctx: InitSilkContext) {
             Modifier.scrollBehavior(ScrollBehavior.Smooth)
         }
     }
+
     ctx.stylesheet.registerStyleBase("body") {
         Modifier
             .fontFamily(
@@ -45,47 +44,13 @@ fun initSiteStyles(ctx: InitSilkContext) {
     ctx.theme.modifyStyleBase(HorizontalDividerStyle) {
         Modifier.fillMaxWidth()
     }
-
-    ctx.stylesheet.registerStyle("*") {
-        cssRule("::-webkit-scrollbar") {
-            Modifier
-                .width(4.px)
-                .height(6.px)
-                .backgroundColor(Colors.Transparent)
-        }
-        cssRule("::-webkit-scrollbar-thumb") {
-            Modifier
-                .borderRadius(10.px)
-                .backgroundColor(ScrollbarThumbColor.value())
-        }
-        cssRule("::-webkit-scrollbar-corner") {
-            Modifier
-                .backgroundColor(BackgroundColor.Transparent)
-        }
-    }
-
-
 }
-
-// To be Set in AppEntry
-val ScrollbarThumbColor by StyleVariable<CSSColorValue>()
-
-
-val scrollBarColorValue by StyleVariable<CSSColorValue>()
 
 val HeadlineTextStyle = CssStyle.base {
     Modifier
         .fontSize(3.cssRem)
         .textAlign(TextAlign.Start)
         .lineHeight(1.2) //1.5x doesn't look as good on very large text
-}
-
-val scrollBarColor = CssStyle.base {
-    Modifier
-        .setVariable(
-            variable = scrollBarColorValue,
-            value = colorMode.toSitePalette().subHeadLine
-        )
 }
 
 val SubheadlineTextStyle = CssStyle.base {
