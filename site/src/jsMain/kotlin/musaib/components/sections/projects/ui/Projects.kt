@@ -10,22 +10,22 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaUpRightFromSquare
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
-import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.px
 import musaib.components.SectionDiscriptionStyle
 import musaib.components.sections.about.style.AboutStyle
-import musaib.components.sections.projects.components.AppearanceAwareImage
 import musaib.components.sections.projects.components.RoundedImage
 import musaib.components.sections.projects.components.getAllProjects
 import musaib.components.utils.Res
 import musaib.components.utils.Res.Constants
 import musaib.components.widgets.SectionTitle
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.px
 
 @Composable
 fun Projects() {
@@ -81,11 +81,10 @@ fun Projects() {
                                     ColorMode.DARK -> Colors.White
                                 }
                             )
-                            .margin(right = 4.px)
+                            .margin(right = 8   .px)
                     )
-                    AppearanceAwareImage(
-                        src = Res.Images.NAVIGATION_ARROW,
-                    )
+                    FaUpRightFromSquare()
+
                 }
             }
         }

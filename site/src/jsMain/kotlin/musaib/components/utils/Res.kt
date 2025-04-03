@@ -46,11 +46,11 @@ object Res {
         const val PROJECT_SECTION_TEXT = "A showcase of my latest work, featuring innovative and " +
                 "functional applications built using modern technologies. "
         const val PROJECT_REPOSITORIES_URL = "https://github.com/MusaibShabir?tab=repositories"
-        const val MORE_ON_GITHUB = "More on GitHub."
+        const val MORE_ON_GITHUB = "More on GitHub"
 
         // Footer
         const val COPYRIGHT = "Musaib Shabir"
-        const val DEVELOPER_LOCATION = "Srinagar, India"
+        const val DEVELOPER_LOCATION = "Kashmir India"
 
         const val GET_IN_TOUCH = "GET IN TOUCH"
         const val GET_IN_TOUCH_DISCRIPTION = "Feel free to reach out for collaboration, project inquiries, " +
@@ -75,8 +75,6 @@ object Res {
 
         const val PORTAL_STAR_LIGHT = "images/portal_star_light.svg"
         const val PORTAL_STAR_DARK = "images/portal_star_dark.svg"
-        const val NAVIGATION_ARROW = "images/Navigation_Arrow.svg"
-
 
 
         // Skills
