@@ -27,6 +27,7 @@ fun DefaultPageLayout(
 ) {
     LaunchedEffect(title) {
         document.title = "Musaib Shabir"
+
     }
 
     Box(
