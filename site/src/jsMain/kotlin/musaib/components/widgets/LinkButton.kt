@@ -9,10 +9,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.leftRight
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
-import com.varabyte.kobweb.silk.components.forms.ButtonKind
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.style.CssStyleVariant
-import musaib.components.styles.ButtonColors
 import org.jetbrains.compose.web.css.cssRem
 
 @Composable
@@ -20,7 +17,6 @@ fun ThemedButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     text: String? = null,
-    colors: CssStyleVariant<ButtonKind>,
     content: @Composable () -> Unit = {}
 ) {
     Button(
@@ -28,7 +24,6 @@ fun ThemedButton(
         modifier = modifier
             .padding { leftRight(0.cssRem) }
         ,
-        colors
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -48,7 +43,6 @@ fun LinkButton(
     path: String,
     modifier: Modifier = Modifier,
     text: String? = null,
-    colors: CssStyleVariant<ButtonKind> = ButtonColors.NormalButton,
     content: @Composable () -> Unit = {}
 ) {
     val ctx = rememberPageContext()
@@ -57,7 +51,6 @@ fun LinkButton(
         onClick = { ctx.router.navigateTo(path) },
         modifier = modifier,
         text = text,
-        colors = colors,
         content = content
     )
 }
