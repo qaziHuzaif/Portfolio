@@ -49,10 +49,6 @@ fun SocialLinksRow() {
 
         ) { FaMedium(size = IconSize.X3) }
 
-        SocialLinkButton(
-            Res.Constants.MAIL_TO
-
-        ) { FaEnvelope(size = IconSize.X3) }
     }
 }
 
