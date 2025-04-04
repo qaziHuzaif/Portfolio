@@ -58,7 +58,7 @@ fun Home(
                 text = Res.Constants.NAME,
                 modifier = UserNameStyle.toModifier()
 
-                    .fontWeight(FontWeight.Bold)
+
             )
 
             SpanText(

@@ -53,9 +53,11 @@ object Res {
         const val DEVELOPER_LOCATION = "Kashmir India"
 
         const val GET_IN_TOUCH = "GET IN TOUCH"
-        const val GET_IN_TOUCH_DISCRIPTION = "Feel free to reach out for collaboration, project inquiries, " +
-                "or just to say hello. I'd love to connect! Whether you're looking for a passionate developer " +
-                "to bring your ideas to life or simply want to discuss the latest in tech, don't hesitate to get in touch. \uD83D\uDE0A"
+        const val GET_IN_TOUCH_DISCRIPTION = "Feel free to reach out for collaboration, project inquiries, or simply to say hello. " +
+                "I'm always eager to connect with like-minded individuals who are passionate about technology and innovation. " +
+                "Whether you're seeking a dedicated developer to bring your ideas to life or wish to engage in discussions " +
+                "about the latest industry trends, don't hesitate to get in touch. Let's collaborate and create something" +
+                " exceptional together!\uD83D\uDE0A"
     }
 
     object Title {

@@ -1,6 +1,7 @@
 package musaib.components.sections.footer.components
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -23,7 +24,9 @@ import org.jetbrains.compose.web.css.cssRem
 import kotlin.js.Date
 
 @Composable
-fun DeveloperLocationInfoRow(modifier: Modifier) {
+fun DeveloperLocationInfoRow(
+    modifier: Modifier = Modifier
+) {
 
     val ctx = rememberPageContext()
 
@@ -32,7 +35,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .displayUntil(Breakpoint.MD),
-        verticalArrangement = Arrangement.spacedBy(1.cssRem)
+        verticalArrangement = Arrangement.spacedBy(3.cssRem)
     ) {
         Row (
             modifier = modifier
@@ -77,7 +80,9 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
 
         FooterSpanText(
             text = getCopyrightText(),
-            modifier = modifier.fillMaxWidth()
+            modifier = modifier
+                .fillMaxWidth()
+                .textAlign(TextAlign.Center)
         )
     }
 
@@ -115,6 +120,7 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
                     ,
                     size = IconSize.XXS
                 )
+
                 SpanText(
                     text = Res.Constants.DEVELOPER_LOCATION,
                     modifier = FooterLocationStyle.toModifier()
@@ -135,6 +141,17 @@ fun DeveloperLocationInfoRow(modifier: Modifier) {
             }
 
         }
+    }
+}
+
+@Composable
+fun LocationAndTime() {
+
+    Row (
+        verticalAlignment = Alignment.CenterVertically
+    ){
+
+
     }
 }
 

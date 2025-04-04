@@ -6,7 +6,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.compose.ui.modifiers.topBottom
 import com.varabyte.kobweb.silk.style.toModifier
 import musaib.components.sections.footer.components.DeveloperLocationInfoRow
 import musaib.components.sections.footer.components.FooterContactRow
@@ -33,9 +32,9 @@ fun Footer(modifier: Modifier = Modifier) {
 
             GetInTouchColumn()
 
-            FooterContactRow()
+            FooterContactRow(modifier = modifier.padding { bottom(4.cssRem) })
 
-            DeveloperLocationInfoRow(modifier = modifier.padding { topBottom(0.5.cssRem) })
+            DeveloperLocationInfoRow()
         }
 
 

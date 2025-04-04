@@ -1,6 +1,8 @@
 package musaib.components.sections.home.style
 
 import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
@@ -64,7 +66,18 @@ val HelloImStyle = CssStyle{
 val UserNameStyle = CssStyle {
 
     base {
-        Modifier.fontSize(3.cssRem)
+        Modifier
+            .fontSize(3.cssRem)
+            .fontWeight(FontWeight.Bold)
+            .textAlign(TextAlign.Start)
+    }
+
+    Breakpoint.LG {
+        Modifier.fontSize(4.cssRem)
+    }
+
+    Breakpoint.XL {
+        Modifier.fontSize(4.cssRem)
     }
 }
 

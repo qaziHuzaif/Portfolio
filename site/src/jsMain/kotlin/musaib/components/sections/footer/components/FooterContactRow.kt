@@ -29,7 +29,7 @@ fun FooterContactRow(modifier: Modifier = Modifier) {
     // Contact Row If At Least SM Size
     Row (
         modifier = modifier
-            .displayUntil(Breakpoint.SM)
+            .displayUntil(Breakpoint.MD)
             .fillMaxWidth()
 
         ,
