@@ -76,7 +76,7 @@ fun Home(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 2.cssRem)
+                    .padding(top = 4.cssRem)
                 ,
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(2.cssRem)

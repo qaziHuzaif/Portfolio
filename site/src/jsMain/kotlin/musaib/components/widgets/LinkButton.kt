@@ -5,35 +5,34 @@ import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
+import com.varabyte.kobweb.compose.ui.modifiers.leftRight
+import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonKind
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyleVariant
 import musaib.components.styles.ButtonColors
-import musaib.components.styles.ButtonShape
-import musaib.components.styles.getButtonModifier
 import org.jetbrains.compose.web.css.cssRem
-import kotlin.text.isNullOrEmpty
 
 @Composable
 fun ThemedButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     text: String? = null,
-    shape: ButtonShape = ButtonShape.RECTANGLE,
     colors: CssStyleVariant<ButtonKind>,
     content: @Composable () -> Unit = {}
 ) {
     Button(
         onClick = { onClick() },
-        modifier.then(getButtonModifier(shape)),
+        modifier = modifier
+            .padding { leftRight(0.cssRem) }
+        ,
         colors
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(0.3.cssRem)
+            horizontalArrangement = Arrangement.spacedBy(0.2.cssRem)
         ) {
             content()
 
@@ -47,9 +46,8 @@ fun ThemedButton(
 @Composable
 fun LinkButton(
     path: String,
-    modifier: Modifier = Modifier.fontFamily("Poppins"),
+    modifier: Modifier = Modifier,
     text: String? = null,
-    shape: ButtonShape = ButtonShape.RECTANGLE,
     colors: CssStyleVariant<ButtonKind> = ButtonColors.NormalButton,
     content: @Composable () -> Unit = {}
 ) {
@@ -59,7 +57,6 @@ fun LinkButton(
         onClick = { ctx.router.navigateTo(path) },
         modifier = modifier,
         text = text,
-        shape = shape,
         colors = colors,
         content = content
     )

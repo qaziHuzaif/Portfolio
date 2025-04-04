@@ -1,17 +1,10 @@
 package musaib.components.sections.footer.components
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
-import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
-import com.varabyte.kobweb.silk.components.icons.fa.FaDiscord
-import com.varabyte.kobweb.silk.components.icons.fa.FaEnvelope
-import com.varabyte.kobweb.silk.components.icons.fa.FaInstagram
-import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedinIn
-import com.varabyte.kobweb.silk.components.icons.fa.FaTelegram
-import com.varabyte.kobweb.silk.components.icons.fa.FaWhatsapp
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
+import com.varabyte.kobweb.silk.components.icons.fa.*
 import musaib.components.sections.home.components.SocialLinkButton
 import musaib.components.utils.Res
 import org.jetbrains.compose.web.css.cssRem
@@ -21,8 +14,7 @@ fun ContactLinksRow(
     displayEmail: Boolean = false
 ) {
     Row(
-        modifier = Modifier
-            .borderRadius(1.cssRem),
+        horizontalArrangement = Arrangement.spacedBy(1.cssRem),
         verticalAlignment = Alignment.CenterVertically,
     ) {
 

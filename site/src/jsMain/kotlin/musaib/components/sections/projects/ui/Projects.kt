@@ -81,7 +81,7 @@ fun Projects() {
                                     ColorMode.DARK -> Colors.White
                                 }
                             )
-                            .margin(right = 8   .px)
+                            .margin(right = 8.px)
                     )
                     FaUpRightFromSquare()
 
