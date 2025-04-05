@@ -48,7 +48,7 @@ fun Home(
                 .animation(HeroContainerKeyFrames.toAnimation(
                     duration = 1.5.s,
                     timingFunction = AnimationTimingFunction.cubicBezier(
-                        0.03, 0.96, 0.19, 0.97
+                        0.4, 0.0, 1.0, 1.0
                     ),
 
                 )),

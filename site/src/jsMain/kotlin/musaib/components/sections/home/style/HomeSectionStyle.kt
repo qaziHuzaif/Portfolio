@@ -111,12 +111,7 @@ val HeroContainerKeyFrames = Keyframes {
             .scale(1)
     }
 
-    80.percent {
-        Modifier
-            .margin(left = (-30).percent)
-            .opacity(0)
-            .scale(1)
-    }
+
 
     100.percent {
         Modifier
