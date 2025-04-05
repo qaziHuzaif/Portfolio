@@ -9,7 +9,13 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.silk.components.icons.fa.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
+import com.varabyte.kobweb.silk.components.icons.fa.FaGithub
+import com.varabyte.kobweb.silk.components.icons.fa.FaMedium
+import com.varabyte.kobweb.silk.components.icons.fa.FaHackerrank
+import com.varabyte.kobweb.silk.components.icons.fa.FaXTwitter
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import musaib.components.styles.SocialLinkStyle
@@ -18,36 +24,58 @@ import musaib.components.widgets.LinkButton
 import org.jetbrains.compose.web.css.cssRem
 
 @Composable
-fun SocialLinksRow() {
+fun SocialLinksRow(
+    breakpoint: Breakpoint
+) {
+    val modifier = Modifier
+        .padding {
+            top(1.cssRem)
+            bottom(5.cssRem)
+        }
+        .then(
+            if (breakpoint == Breakpoint.ZERO || breakpoint == Breakpoint.SM) {
+                Modifier.padding { bottom(3.cssRem) }
+            } else {
+                Modifier
+            }
+        )
+
+    val spaceBetweenIcons = when (breakpoint) {
+        Breakpoint.ZERO, Breakpoint.SM, Breakpoint.MD -> 1.5.cssRem
+        else -> 2.5.cssRem
+    }
     Row(
-        modifier = Modifier.padding { top(1.cssRem) },
-        horizontalArrangement = Arrangement.spacedBy(2.cssRem),
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(spaceBetweenIcons),
         verticalAlignment = Alignment.CenterVertically
     ){
 
-
+        val iconSize = when (breakpoint) {
+            Breakpoint.ZERO, Breakpoint.SM, Breakpoint.MD ->IconSize.X3
+            else -> IconSize.X4
+        }
         SocialLinkButton(
             Res.Constants.LINKEDIN_URL
-        ) { FaLinkedin(size = IconSize.X3) }
+        ) { FaLinkedin(size = iconSize) }
 
         SocialLinkButton(
             Res.Constants.GITHUB_URL
-        ) { FaGithub(size = IconSize.X3) }
+        ) { FaGithub(size = iconSize) }
 
         SocialLinkButton(
             Res.Constants.TWITTER_URL
 
-        ) { FaXTwitter(size = IconSize.X3) }
+        ) { FaXTwitter(size = iconSize) }
 
         SocialLinkButton(
             Res.Constants.HACKER_RANK_URL
 
-        ) { FaHackerrank(size = IconSize.X3) }
+        ) { FaHackerrank(size = iconSize) }
 
         SocialLinkButton(
             Res.Constants.MEDIUM_URL
 
-        ) { FaMedium(size = IconSize.X3) }
+        ) { FaMedium(size = iconSize) }
 
     }
 }

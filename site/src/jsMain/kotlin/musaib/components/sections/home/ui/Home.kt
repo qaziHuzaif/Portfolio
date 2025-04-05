@@ -8,13 +8,20 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
+import com.varabyte.kobweb.compose.ui.modifiers.animation
+import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
+import com.varabyte.kobweb.compose.ui.modifiers.id
+import com.varabyte.kobweb.compose.ui.modifiers.color
+import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.animation.toAnimation
 import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import musaib.SitePalette
 import musaib.components.sections.home.components.SocialLinksRow
 import musaib.components.sections.home.style.*
@@ -70,13 +77,16 @@ fun Home(
 
             val ctx = rememberPageContext()
 
+            val breakpoint = rememberBreakpoint()
 
-            SocialLinksRow()
+
+            SocialLinksRow(
+                breakpoint = breakpoint
+            )
 
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 4.cssRem)
                 ,
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(2.cssRem)
@@ -95,7 +105,6 @@ fun Home(
                         text = Res.Constants.RESUME,
                         modifier = Modifier
                             .color(currentPalette.buttonText)
-                            .fontFamily("Lexend")
                     )
                 }
 

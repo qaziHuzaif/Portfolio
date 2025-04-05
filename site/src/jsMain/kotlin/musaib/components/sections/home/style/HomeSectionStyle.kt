@@ -55,11 +55,11 @@ val HelloImStyle = CssStyle{
         Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.XXLarge)
+        Modifier.fontSize(2.5.cssRem)
     }
 
     Breakpoint.XL {
-        Modifier.fontSize(FontSize.XXLarge)
+        Modifier.fontSize(2.5.cssRem)
     }
 }
 
