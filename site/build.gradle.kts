@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "musaib"
-version = "0.21.1-SNAPSHOT"
+version = "0.21.1"
 
 kobweb {
     app {
