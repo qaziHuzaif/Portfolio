@@ -27,7 +27,7 @@ object Res {
 
         const val GREETING = "Hello I'm"
         const val NAME = "Qazi Huzaif"
-        const val SUB_HEADLINE = "A Professional Kotlin & Android Developer"
+        const val SUB_HEADLINE = "Android Developer | Kotlin"
         const val RESUME = "Resume"
         const val EMAIL = "Email"
 
@@ -70,6 +70,7 @@ object Res {
 
         // Hero Background
         const val WAVES = "images/waves.svg"
+        const val EDITOR_IMAGE = "images/editor_image.svg"
         const val GREEN_CIRCE = "images/green_circle.svg"
 
 

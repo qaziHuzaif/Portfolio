@@ -25,15 +25,15 @@ object SitePalettes {
     val light = SitePalette(
         nearBackground = Color.rgb(0xF4F6FA),
         discription = Colors.Gray,
-        subHeadLine = Color.rgb(0x0da30d),
+        subHeadLine = Color.rgb(0x9013FE),
         buttonBackground = Colors.Black,
         buttonText = Colors.White,
 
     )
     val dark = SitePalette(
-        nearBackground = Color.rgb(0x454545),
+        nearBackground = Color.rgb(0x000000),
         discription = Colors.LightGray,
-        subHeadLine = Color.rgb(0x49D344),
+        subHeadLine = Color.rgb(0x9013FE),
         buttonBackground = Colors.White,
         buttonText = Colors.Black,
 

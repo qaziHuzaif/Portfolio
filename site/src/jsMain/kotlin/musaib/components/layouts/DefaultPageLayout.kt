@@ -26,7 +26,7 @@ fun DefaultPageLayout(
     content: @Composable () -> Unit,
 ) {
     LaunchedEffect(title) {
-        document.title = "Musaib Shabir"
+        document.title = "Qazi Huzaif"
     }
 
     Box(
@@ -57,6 +57,17 @@ fun DefaultPageLayout(
             ,
             src = Res.Images.WAVES
         )
+
+        //        Actual image
+//        SVGHeroBackround(
+//            modifier = Modifier
+//                .displayIfAtLeast(Breakpoint.LG)
+//                .top(200.px)
+//                .right(50.px)
+//                .height(60.vh)
+//            ,
+//            src = Res.Images.EDITOR_IMAGE
+//        )
 
         Column(
             modifier = Modifier
