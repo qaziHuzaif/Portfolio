@@ -20,16 +20,6 @@ Kobweb is an opinionated Kotlin framework for creating websites and web applicat
 - **[Kotlin](https://kotlinlang.org/):** Modern programming language for concise and expressive code.
 
 
-## Previews: 
-### Home Section
-![Preview](images/home_section.gif)
-
-### Dark Theme
-![Preview](images/full_screenShot_dark.png)
-
-### Light Theme
-![Preview](images/full_screenShot_light.png)
-
 
 ## Getting Started
 
