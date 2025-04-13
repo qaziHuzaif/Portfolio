@@ -16,7 +16,7 @@ import musaib.toSitePalette
 @Page
 @Composable
 fun HomePage() {
-    DefaultPageLayout("Musaib Shabir") {
+    DefaultPageLayout("Qazi Huzaif") {
 
         Column (
             modifier = Modifier.fillMaxSize(),

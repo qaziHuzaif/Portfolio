@@ -57,19 +57,13 @@ fun SocialLinksRow(
         ) { FaGithub(size = iconSize) }
 
         SocialLinkButton(
-            Res.Constants.TWITTER_URL
+            Res.Constants.DISCORD_URL
+        ) { FaDiscord(size = iconSize) }
 
-        ) { FaXTwitter(size = iconSize) }
-
-        SocialLinkButton(
-            Res.Constants.HACKER_RANK_URL
-
-        ) { FaHackerrank(size = iconSize) }
-
-        SocialLinkButton(
-            Res.Constants.MEDIUM_URL
-
-        ) { FaMedium(size = iconSize) }
+//        SocialLinkButton(
+//            Res.Constants.HACKER_RANK_URL
+//
+//        ) { FaHackerrank(size = iconSize) }
 
     }
 }

@@ -4,22 +4,20 @@ object Res {
 
     object Constants {
 
-        const val GITHUB_URL = "https://github.com/MusaibShabir"
-        const val LINKEDIN_URL = "https://www.linkedin.com/in/musaibshabir"
-        const val TWITTER_URL = "https://x.com/musaib_shabir"
-        const val HACKER_RANK_URL = "https://www.hackerrank.com/profile/musaibshabir"
-        const val MEDIUM_URL =  "https://medium.com/@musaib.shabir"
-        const val MAIL_TO = "mailto:itzmusaibshabir@gmail.com"
+        const val GITHUB_URL = "https://github.com/qaziHuzaif"
+        const val LINKEDIN_URL = "https://www.linkedin.com/in/qazi-huzaif-4675211b4"
+        const val DISCORD_URL = "https://discordapp.com/users/920609976932765756"
+//        const val HACKER_RANK_URL = "https://www.hackerrank.com/profile/musaibshabir"
+        const val MAIL_TO = "mailto:qazihuzaif25@gmail.com"
 
-        const val RESUME_URL = "https://drive.google.com/file/d/11M1RPYv3xNdwc88zEVvHVPVSrb5G9Fna/view?usp=drive_link"
+        const val RESUME_URL = "https://drive.google.com/file/d/1KAJ2twbwzTwiQ_A2xTxNYRN8oXlcdxAh/view?usp=drivesdk"
         const val DEVELOPER_LOCATION_ON_MAP = "https://maps.app.goo.gl/bjR36bERzYbTsqkv6"
 
 
 
-        const val DISCORD_URL = "https://discordapp.com/users/914566253312618527"
-        const val WHATSAPP_URL = "https://wa.me/qr/YSOCVLJKQJMIN1"
-        const val TELEGRAM_URL = "https://t.me/MusaibShabir"
-        const val INSTAGRAM_URL = "https://www.instagram.com/musaib.shabir/"
+        const val TWITTER_URL = "https://x.com/_QaziHuzaif"
+        const val WHATSAPP_URL = "https://wa.me/qr/7IOW2CRHC437I1"
+        const val TELEGRAM_URL = "http://t.me/QHuzaif"
 
 
         // Projects Links
@@ -28,7 +26,7 @@ object Res {
         const val PORTFOLIO_URL = "https://github.com/MusaibShabir/Portfolio"
 
         const val GREETING = "Hello I'm"
-        const val NAME = "Musaib Shabir"
+        const val NAME = "Qazi Huzaif"
         const val SUB_HEADLINE = "A Professional Kotlin & Android Developer"
         const val RESUME = "Resume"
         const val EMAIL = "Email"
@@ -45,11 +43,11 @@ object Res {
 
         const val PROJECT_SECTION_TEXT = "A showcase of my latest work, featuring innovative and " +
                 "functional applications built using modern technologies. "
-        const val PROJECT_REPOSITORIES_URL = "https://github.com/MusaibShabir?tab=repositories"
+        const val PROJECT_REPOSITORIES_URL = "https://github.com/qaziHuzaif?tab=repositories"
         const val MORE_ON_GITHUB = "More on GitHub"
 
         // Footer
-        const val COPYRIGHT = "Musaib Shabir"
+        const val COPYRIGHT = "Qazi Huzaif"
         const val DEVELOPER_LOCATION = "Kashmir India"
 
         const val GET_IN_TOUCH = "GET IN TOUCH"
