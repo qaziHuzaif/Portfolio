@@ -15,18 +15,26 @@ enum class Skill(
         iconResLight = Res.Images.ANDROID_STUDIO_DARK_LOGO,
         iconResDark = Res.Images.ANDROID_STUDIO_LIGHT_LOGO,
     ),
-    IntellijIdea(
-       skillName = "IntelliJ IDEA",
-        level = "Skilled",
-        iconResLight = Res.Images.INTELLIJ_IDEA_LOGO,
-        iconResDark = Res.Images.INTELLIJ_IDEA_LOGO,
-    ),
 
     Kotlin(
        skillName = "Kotlin",
         level = "Skilled",
         iconResLight = Res.Images.KOTLIN_LOGO,
         iconResDark = Res.Images.KOTLIN_LOGO,
+    ),
+
+    Compose(
+        skillName = "Compose",
+        level = "Skilled",
+        iconResLight = Res.Images.COMPOSE_LOGO,
+        iconResDark = Res.Images.COMPOSE_LOGO,
+    ),
+
+    IntellijIdea(
+        skillName = "IntelliJ IDEA",
+        level = "Skilled",
+        iconResLight = Res.Images.INTELLIJ_IDEA_LOGO,
+        iconResDark = Res.Images.INTELLIJ_IDEA_LOGO,
     ),
 
     Java(
@@ -41,13 +49,6 @@ enum class Skill(
         level = "Skilled",
         iconResLight = Res.Images.CPP_LOGO,
         iconResDark = Res.Images.CPP_LOGO,
-    ),
-
-    Compose(
-        skillName = "Compose",
-        level = "Skilled",
-        iconResLight = Res.Images.COMPOSE_LOGO,
-        iconResDark = Res.Images.COMPOSE_LOGO,
     ),
 
     Ktor(
