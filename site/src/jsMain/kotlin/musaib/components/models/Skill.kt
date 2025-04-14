@@ -46,7 +46,7 @@ enum class Skill(
 
     CPP(
         skillName = "C++",
-        level = "Skilled",
+        level = "Novice",
         iconResLight = Res.Images.CPP_LOGO,
         iconResDark = Res.Images.CPP_LOGO,
     ),
