@@ -67,7 +67,7 @@ enum class Skill(
 
     Firebase(
         skillName = "Firebase",
-        level = "Adept",
+        level = "Skilled",
         iconResLight = Res.Images.FIREBASE_LOGO,
         iconResDark = Res.Images.FIREBASE_LOGO,
     ),
