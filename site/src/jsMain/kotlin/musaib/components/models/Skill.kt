@@ -95,7 +95,7 @@ enum class Skill(
 
     Figma(
         skillName = "Figma",
-        level = "Adept",
+        level = "Skilled",
         iconResLight = Res.Images.FIGMA_LOGO,
         iconResDark = Res.Images.FIGMA_LOGO,
     ),
